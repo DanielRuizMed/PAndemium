@@ -2,11 +2,11 @@
 Repositorio de Proyecto de la asignatura Infraestructuras Virtuales
 
 ## SerIMC
-###Descripción del problema
+### Descripción del problema
 La idea viene motivada por conocer el **IMC** personal y consejos nutricionales, 
 pasando para ello el peso, altura y sexo del sujeto.
 
-###Herramientas
+### Herramientas
 - Lenguaje: Raku
 - Libreria: Cro
 
