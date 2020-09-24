@@ -7,10 +7,10 @@ La idea viene motivada por conocer el **número de contagios** actuales en las d
 provincias de España.
 
 ### Desarrollo
-Se crearan 2-3 microservicios:
-	- Uno dedicado a hacer scraping de una o diferentes web para obtener información, se programará en php.
-	- Otro dedicado a las operaciones CRUD en la base de datos, almacenando y sirviendolos a las distintas peticiones, se programara en Raku o NodeJs segun complejidad.
-	- Otro dedicado a un despliegue web donde se recogerá y mostrarán los datos al usuario, se programara en Raku o NodeJs segun complejidad.
+Se crearán 3 microservicios:
+- Uno dedicado a hacer scraping de una o diferentes web para obtener información. Se programará en php.
+- Otro dedicado a las operaciones CRUD en la base de datos, almacenando y sirviendo los datos a las distintas peticiones. Se programará en Raku o NodeJs segun complejidad.
+- El último dedicado al despliegue web para recoger y mostrar los datos al usuario. Se programara en Raku o NodeJs segun complejidad.
 
 ### Herramientas
 - Lenguajes: Raku, Php, NodeJs
