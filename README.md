@@ -4,7 +4,8 @@
 
 ### Descripción del problema
 La idea viene motivada por conocer el **número de contagios** actuales en las distintas
-provincias de España.
+provincias de España, la aplicación mostrara el número de casos actual y la evolución de los
+mismos en el tiempo.
 
 ### Desarrollo
 Se crearán 3 microservicios:
