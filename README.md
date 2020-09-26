@@ -7,15 +7,9 @@ La idea viene motivada por conocer el **número de contagios** actuales en las d
 provincias de España, la aplicación mostrara el número de casos actual y la evolución de los
 mismos en el tiempo.
 
-### Desarrollo
-Se crearán 3 microservicios:
-- Uno dedicado a hacer scraping de una o diferentes web para obtener información. Se programará en php.
-- Otro dedicado a las operaciones CRUD en la base de datos, almacenando y sirviendo los datos. Se programará en Raku o NodeJs segun complejidad.
-- El último dedicado al despliegue web para recoger y mostrar los datos al usuario. Se programara en Raku o NodeJs segun complejidad.
 
 ### Herramientas
-- Lenguajes: Raku, Php, NodeJs
-- Libreria: Cro
+- Lenguajes: NodeJs
 
 ### Documentación
 [PAndemium](https://danielruizmed.github.io/ProyectoIV/)
