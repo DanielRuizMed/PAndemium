@@ -44,5 +44,3 @@ He decidido crear este proyecto por el reto de aprender a crear una API REST y m
 - [API REST y Node.js](https://www.youtube.com/watch?v=bK3AJfs7qNY)
 - [MongoDB y moongose](https://www.youtube.com/watch?v=-bI0diefasA)
 - [API de datos](https://covid19tracking.narrativa.com/es/spain/api.html)
-
-
