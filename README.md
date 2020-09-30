@@ -34,7 +34,7 @@ Para **obtener los datos** se usara una API que dispone de los datos en formato 
 [PAndemium](https://danielruizmed.github.io/ProyectoIV/)
 
 ### Motivo del proyecto
-He decidido crear este proyecto por el reto de aprender a crear una API REST y microservicios con dos lenguajes diferentes.
+He decidido crear este proyecto por el reto de aprender a crear una API REST y microservicios con dos lenguajes diferentes. 
 
 ### Configuración de Git
 [Configuración](https://github.com/DanielRuizMed/PAndemium/blob/master/docs/config.md)
