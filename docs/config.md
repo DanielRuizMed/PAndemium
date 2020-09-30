@@ -1,4 +1,4 @@
-#Gonfiguración de Git
+# Gonfiguración de Git
 
 ## Clave ssh
 ![imagen2](docs/img/conf2.png)

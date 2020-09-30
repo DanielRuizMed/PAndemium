@@ -37,7 +37,7 @@ Para **obtener los datos** se usara una API que dispone de los datos en formato 
 He decidido crear este proyecto por el reto de aprender a crear una API REST y microservicios con dos lenguajes diferentes.
 
 ### Configuración de Git
-[Configuración](https://danielruizmed.github.io/ProyectoIV/docs/config.md)
+[Configuración](https://github.com/DanielRuizMed/PAndemium/blob/master/docs/config.md)
 
 ### Enlaces utilizados
 - [Microservicion en php](http://micaminomaster.com.co/devops/microservicio-php-lumen-nodejs-mocha/)
