@@ -1,19 +1,36 @@
 
 ## PAndemium
+
+## PAndemium
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+### Instalación y despliegue
+
+Tras descargar el código, entramos en la carpera pandemiun, abrimos una terminal y tecleamos:
+
+	`npm install`
+
+Tras tener intalados los modulos entramos en src y ponemos en la terminal
+
+	`npm index`
+
+![imagen](img/hito1_1.png)
 
 ### Descripción del problema
 La idea viene motivada por conocer el **número de contagios** actuales en las distintas
-provincias de España, la aplicación mostrara el número de casos actual y la evolución de los
+provincias de España, la aplicación mostrará el número de casos actual y la evolución de los
 mismos en el tiempo.
 
 ### Descripción del proyecto
-Se va a crear un **API REST** que será la encagada de responder a las peticiones y procesar los datos en formato JSON. Pudiendo almacenar, eliminar, actualizar o consultar los datos de la misma que seran guardado en una base de datos mongoDB.
+Se creará una **API REST** que será la encagada de responder las peticiones y procesar los datos en formato JSON. Pudiendo almacenar, eliminar, actualizar o consultar los datos de la misma que se guardará en una base de datos mongoDB.
 
 ### Herramientas
 - Para implemetar PAndemium se utilizara el lenguaje JavaScript en el entorno de ejecución de Node.js que con mvw se ha usado la versión 12.18.4.
 	- Se utlizaran las librerías:
 		* Express: para hacer mas comoda la implementación de código.
+- MongoDB
+	- Se utlizaran las librerías:
+		* Mongoose: para hacer mas sencillas las consultas.
 
 ### Documentación en Git Pages
 [PAndemium](https://danielruizmed.github.io/PAndemium/)
@@ -24,4 +41,6 @@ Se va a crear un **API REST** que será la encagada de responder a las peticione
 ### Enlaces utilizados
 - [API REST y Node.js](https://www.youtube.com/watch?v=bK3AJfs7qNY)
 - [MongoDB y moongose](https://www.youtube.com/watch?v=-bI0diefasA)
+
+
 
