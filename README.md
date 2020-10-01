@@ -15,6 +15,8 @@ Se creará una **API REST** que será la encagada de responder las peticiones y 
 	- Se utlizaran las librerías:
 		* Express: para hacer mas comoda la implementación de código.
 - MongoDB
+	- Se utlizaran las librerías:
+		* Mongoose: para hacer mas sencillas las consultas.
 
 ### Documentación en Git Pages
 [PAndemium](https://danielruizmed.github.io/PAndemium/)
