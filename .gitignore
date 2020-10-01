@@ -4,5 +4,5 @@
 # precompiled files
 .precomp
 lib/.precomp
-api_rest/node_modules
+pandemiun/node_modules
 
