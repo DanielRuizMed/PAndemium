@@ -2,6 +2,16 @@
 ## PAndemium
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+### Instalación y despliegue
+
+Tras descargar el código, entramos en la carpera pandemiun, abrimos una terminal y tecleamos:
+
+	`npm install`
+
+Tras tener intalados los modulos entramos en src y ponemos en la terminal
+
+	`npm index`
+
 ### Descripción del problema
 La idea viene motivada por conocer el **número de contagios** actuales en las distintas
 provincias de España, la aplicación mostrará el número de casos actual y la evolución de los
