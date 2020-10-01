@@ -24,6 +24,7 @@ Para **obtener los datos** se usara una API que dispone de los datos en formato 
 		* Morgan: para ver las peticiones que se reciben
 		* Nodemon: el cual solo se usará en desarrollo ya que permite no tener que estar reiniciando el servicio.
 		* underscore: para recorrer de forma mas comoda los datos en formato JSON
+		* node-fetch: para hacer llamada asincronas a otras API
 
 - GranPan se implementará en PHP en la versión 7.4.10
 	- Se utlizaran las librerías:
