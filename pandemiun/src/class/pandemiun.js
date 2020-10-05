@@ -8,15 +8,11 @@ class Pandemiun //clase que procesa la lógica de los datos
 
     }
 
-    getDatos (provincia,fecha_ini,fecha_fin) {
+    getDatos (provincia,fecha,estado) {
 
     }
 
     updateDatos (datos) {
-
-    }
-
-    deleteDatos (datos) {
 
     }
 
