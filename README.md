@@ -10,7 +10,7 @@ Tras descargar el código, entramos en la carpera pandemiun, abrimos una termina
 
 Tras tener intalados los modulos entramos en src y ponemos en la terminal
 
-	npm index 
+	npm index
 
 ### Descripción del problema
 La idea viene motivada por conocer el **número de contagios** y posibles contagios de la mano de la población. Este problema trata resolver o verificar si la información que nos proporcionan es real o no, haciendo de la colaboración ciudadana nuestra mejor arma.
