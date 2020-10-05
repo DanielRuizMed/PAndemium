@@ -19,7 +19,7 @@ La idea viene motivada por conocer el **número de contagios** y posibles contag
 Se creará una **API REST** que será la encagada de responder las peticiones y procesar los datos en formato JSON. Cualquier usuario podrá consultar el número de contagios confirmados en una fecha y provincia de España. Un usuario Registrado podrá comunicar su estado (bien, contagiado, sintomas leves, sintomas preocupantes).
 
 ### Motivo
-Conocer el número de contagios y posibles contagios en tu provincia. He elegido implementar con JavaScript en el entorno de Node.js, por el reto de aprender a desplegar API REST en este entorno.
+Conocer el número de contagios y posibles contagios en tu provincia gracias a la colaboración ciudadana. He elegido implementar con JavaScript en el entorno de Node.js, por el reto de aprender a desplegar API REST en este entorno.
 
 ### Pasos
 [historia](docs/pasos.md)
