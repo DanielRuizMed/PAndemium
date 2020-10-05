@@ -13,6 +13,7 @@ las librerias, logs,... que se van a utilizar para el despliegue.
 	- [agregando pandemiun.js](https://github.com/DanielRuizMed/PAndemium/issues/10)
 	- [Aztualización clase](https://github.com/DanielRuizMed/PAndemium/issues/9)
 	- [clase base de datos](https://github.com/DanielRuizMed/PAndemium/issues/11)
+	- [actualizar pasos](https://github.com/DanielRuizMed/PAndemium/issues/18)
 
 # Hito 2
 ...
