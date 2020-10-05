@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 //settings
-app.set( 'port', process.env.PORT || 3000 );//process.env.PORT PARA LUEGO EMITIR EN EL PUERTO DE LA NUBE QUE NOS DEJEN USAR
+app.set( 'port', process.env.PORT || 3000 );//process.env.PORT 
 app.set( 'json spaces', 2 );
 
 app.use( express.urlencoded( {extended: false} ) );//nuestro servidor recoja-entienda los datos enviados por formularios
