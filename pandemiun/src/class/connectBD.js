@@ -1,16 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); 
 
 class ConnectBD //clase que procesa la lógica de los datos
 {
 
-    constructor()
+    constructor() 
     {
 
         //mongoose.connect('mongodb:://localhost/pandemiun');
 
     }
 
-    select (datos) {
+    select (datos) { 
 
     }
 
@@ -18,7 +18,7 @@ class ConnectBD //clase que procesa la lógica de los datos
 
     }
 
-    delete (datos) {
+    delete (datos) { 
 
     }
 
@@ -28,4 +28,4 @@ class ConnectBD //clase que procesa la lógica de los datos
 
 }
 
-module.exports = new ConnectBD();
+module.exports = new ConnectBD(); 
