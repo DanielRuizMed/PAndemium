@@ -1,4 +1,4 @@
-const { ConnectBD } = require('../class/connectBD.js');
+const { ConnectBD } = require('../class/connectBD.js'); 
 
 class Pandemiun //clase que procesa la lógica de los datos
 {
