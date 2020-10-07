@@ -11,6 +11,7 @@ Issues Nuevos:
 - [Clases](https://github.com/DanielRuizMed/PAndemium/issues/20)
 - [Actualización de Readme.md](https://github.com/DanielRuizMed/PAndemium/issues/21)
 - [Actualizar pasos y GitPages](https://github.com/DanielRuizMed/PAndemium/issues/22)
+- [Motivos y actualizar pasos](https://github.com/DanielRuizMed/PAndemium/issues/23)
 
 Issues Antiguos:
 - [Subida Readme.md y iv.yaml](https://github.com/DanielRuizMed/PAndemium/issues/6)
