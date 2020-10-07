@@ -1,4 +1,4 @@
-## Eleccion de idea
+## Elección de idea
 Conocer el número de contagios y posibles contagios en tu provincia gracias a la colaboración ciudadana. 
 
 ## Node.js
