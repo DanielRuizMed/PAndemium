@@ -1,4 +1,4 @@
-const mongoose = require('mongoose'); 
+
 
 class ConnectBD //clase que procesa la lógica de los datos
 {
