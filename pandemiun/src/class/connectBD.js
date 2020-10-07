@@ -18,10 +18,6 @@ class ConnectBD //clase que procesa la lógica de los datos
 
     }
 
-    delete (datos) { 
-
-    }
-
     add (datos) {
 
     }

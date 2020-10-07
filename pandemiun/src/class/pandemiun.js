@@ -1,4 +1,4 @@
-
+const bd = require('./connectBD.js')
 
 class Pandemiun //clase que procesa la lógica de los datos
 {
@@ -12,14 +12,14 @@ class Pandemiun //clase que procesa la lógica de los datos
 
     }
 
-    updateDatos (datos) {
+    updateDatos (nick,provincia,fecha,estado) {
 
     }
 
-    addDatos (datos) {
+    addDatos (nick,provincia,fecha,estado) {
 
     }
 
 }
 
-module.exports = new Pandemiun();
+module.exports = Pandemiun; 
