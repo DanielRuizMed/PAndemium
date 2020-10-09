@@ -36,10 +36,10 @@ Las herramientas que se han elegido asi como el motivo de las mimas y de la idea
 
 ---
 
-### Pasos seguidos. (issues/milestones)
+### Pasos seguidos y capeta con clases creadas. (issues/milestones)
 
 [Pasos](docs/pasos.md).
-
+[carpeta](pandemiun/src/class)
 ---
 
 ### Historias de Usuario
