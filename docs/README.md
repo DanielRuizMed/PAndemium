@@ -37,9 +37,9 @@ Pasos que se deben seguir para ejecutar o realizar test del programa en este [en
 
 ### Milestone, pasos con issues detallados y carpeta con clases 
 
-El la direcion del milestone es [esta.](https://github.com/DanielRuizMed/PAndemium/milestone/7)
+La dirección del milestone es [esta.](https://github.com/DanielRuizMed/PAndemium/milestone/7)
 
-- [Pasos](pasos.md), donde estan los issues y una descripción general.
+- [Pasos](pasos.md), donde están los issues y una descripción general.
 - [carpeta](../pandemiun/src/class), con las clases creadas.
 
 ---
