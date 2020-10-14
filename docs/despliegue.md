@@ -16,3 +16,6 @@ Primero nos descargamos todas las dependencias
 Después escribimos:
 
 	npm test
+
+Imagen con resultado de ejecución
+![imagen](img/hito2.png)
