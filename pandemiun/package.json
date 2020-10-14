@@ -1,0 +1,28 @@
+{
+  "name": "pandemiun",
+  "version": "1.0.0",
+  "description": "Recuento colaborativo de contagios Covid-19 en las provincias de España.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielRuizMed/PAndemium.git"
+  },
+  "keywords": [
+    "Pandemiun",
+    "IV"
+  ],
+  "author": "Daniel Ruiz Medina",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DanielRuizMed/PAndemium/issues"
+  },
+  "homepage": "https://github.com/DanielRuizMed/PAndemium#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.1.3"
+  }
+}
