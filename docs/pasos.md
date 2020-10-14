@@ -13,7 +13,7 @@
 - [Readme y gitpages](https://github.com/DanielRuizMed/PAndemium/issues/37).
 - [Actualización y creación de historias de usuarios](https://github.com/DanielRuizMed/PAndemium/issues/42).
 - [Actualizar pasos](https://github.com/DanielRuizMed/PAndemium/issues/43).
-
+ 
 ---
 
 # Hito 1
