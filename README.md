@@ -1,6 +1,5 @@
 
 ## PAndemium
-
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ---
@@ -18,15 +17,9 @@ estado.
 
 ---
 
-### Como hacer funcionar la aplicación (Despliegue)
+### Herramientas y Motivo (librerías test)
 
-Se indican los pasos que se deben seguir para ejecutar el programa en este [enlace](docs/despliegue.md).
-
----
-
-### Herramientas y Motivo
-
-Las herramientas que se han elegido asi como el motivo de las mimas y de la idea de la aplicación se encuentran en el siguiente [enlace](docs/motivo.md)
+Las herramientas que se han elegido asi como el motivo de las mimas y la idea de la aplicación se encuentran en el siguiente [enlace](docs/motivo.md)
 
 ---
 
@@ -36,10 +29,18 @@ Las herramientas que se han elegido asi como el motivo de las mimas y de la idea
 
 ---
 
-### Pasos seguidos y capeta con clases creadas. (issues/milestones)
+### Como hacer funcionar la aplicación (Despliegue) y test
 
--[Pasos](docs/pasos.md).
--[carpeta](pandemiun/src/class)
+Pasos que se deben seguir para ejecutar o realizar test del programa en este [enlace](docs/despliegue.md).
+
+---
+
+### Milestone, pasos con issues detallados y carpeta con clases 
+
+El la direcion del milestone es [esta.](https://github.com/DanielRuizMed/PAndemium/milestone/7)
+
+- [Pasos](docs/pasos.md), donde estan los issues y una descripción general.
+- [carpeta](pandemiun/src/class), con las clases creadas.
 
 ---
 
@@ -49,21 +50,9 @@ Las herramientas que se han elegido asi como el motivo de las mimas y de la idea
 
 ---
 
-### Issues
-
-Esta es la lista de [Issues](https://github.com/DanielRuizMed/PAndemium/issues?q=is%3Aissue+is%3Aclosed) donde he puesto el label new-h1 para indicar los nuevos issues en los cual he seguido creando la aplicación tras la eliminación de la librería express, asi como diferentes archivos e implementación.
-
----
-
-### GitPAges
-
-En el siguiente [enlace](https://danielruizmed.github.io/PAndemium/) podemos ver GitPAges con la documentación del proyecto.
-
----
-
 ### Enlaces internos
+- [GitPages](https://danielruizmed.github.io/PAndemium/)
 - [Configuración git](https://github.com/DanielRuizMed/PAndemium/blob/master/docs/config.md)
 
 ### Enlaces externos utilizados, fuentes utilizadas para el aprendizaje
 - [API REST y Node.js](https://www.youtube.com/watch?v=bK3AJfs7qNY)
-- [MongoDB y moongose](https://www.youtube.com/watch?v=-bI0diefasA)

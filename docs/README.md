@@ -1,6 +1,5 @@
 
-## PAndemium
-
+## PAndemium 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ---
@@ -18,15 +17,9 @@ estado.
 
 ---
 
-### Como hacer funcionar la aplicación (Despliegue)
+### Herramientas y Motivo (librerías test)
 
-Se indican los pasos que se deben seguir para ejecutar el programa en este [enlace](despliegue.md).
-
----
-
-### Herramientas y Motivo
-
-Las herramientas que se han elegido asi como el motivo de las mimas y de la idea de la aplicación se encuentran en el siguiente [enlace](motivo.md)
+Las herramientas que se han elegido asi como el motivo de las mimas y la idea de la aplicación se encuentran en el siguiente [enlace](motivo.md)
 
 ---
 
@@ -36,9 +29,18 @@ Las herramientas que se han elegido asi como el motivo de las mimas y de la idea
 
 ---
 
-### Pasos seguidos. (issues/milestones)
+### Como hacer funcionar la aplicación (Despliegue) y test
 
-[Pasos](pasos.md).
+Pasos que se deben seguir para ejecutar o realizar test del programa en este [enlace](despliegue.md).
+
+---
+
+### Milestone, pasos con issues detallados y carpeta con clases 
+
+El la direcion del milestone es [esta.](https://github.com/DanielRuizMed/PAndemium/milestone/7)
+
+- [Pasos](pasos.md), donde estan los issues y una descripción general.
+- [carpeta](../pandemiun/src/class), con las clases creadas.
 
 ---
 
@@ -48,17 +50,9 @@ Las herramientas que se han elegido asi como el motivo de las mimas y de la idea
 
 ---
 
-### GitPAges
-
-En el siguiente [enlace](https://danielruizmed.github.io/PAndemium/) podemos ver GitPAges con la documentación del proyecto.
-
----
-
 ### Enlaces internos
+- [GitPages](https://danielruizmed.github.io/PAndemium/)
 - [Configuración git](https://github.com/DanielRuizMed/PAndemium/blob/master/docs/config.md)
 
 ### Enlaces externos utilizados, fuentes utilizadas para el aprendizaje
 - [API REST y Node.js](https://www.youtube.com/watch?v=bK3AJfs7qNY)
-- [MongoDB y moongose](https://www.youtube.com/watch?v=-bI0diefasA)
-
-
