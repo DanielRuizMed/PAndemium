@@ -46,7 +46,7 @@ La dirección del milestone es [esta.](https://github.com/DanielRuizMed/PAndemiu
 
 ### Historias de Usuario
 
-[Historias](https://github.com/DanielRuizMed/PAndemium/issues).
+[Historias](https://github.com/DanielRuizMed/PAndemium/milestone/9).
 
 ---
 
