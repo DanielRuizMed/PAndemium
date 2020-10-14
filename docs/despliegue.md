@@ -2,14 +2,14 @@
 
 Ejecutamos la clase principal (provisional hasta montar la API REST)
 
-	node cd pandemiun
+	cd pandemiun
 
 	node src/class/pandemiun.js
 
 ### Test
 Primero nos descargamos todas las dependencias
 
-	node cd pandemiun
+	cd pandemiun
 
 	npm install
 
