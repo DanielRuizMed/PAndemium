@@ -1,5 +1,7 @@
 # Hito 2
 
+Milestone del hito 2 [enlace](https://github.com/DanielRuizMed/PAndemium/milestone/7).
+
 - [Classe connectBD](https://github.com/DanielRuizMed/PAndemium/issues/27), con la implementación de los metodos.
 - [Clase pandemiun.js](https://github.com/DanielRuizMed/PAndemium/issues/28), con la implementación de los metodos.
 - [Datos json y carpeta contenedora](https://github.com/DanielRuizMed/PAndemium/issues/29), archivos donde se recogen los datos a consultar-modificar de la aplicación.
