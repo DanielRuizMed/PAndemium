@@ -107,7 +107,6 @@ class ListadoContagios //clase que procesa la lógica de los datos
             }
         } );
 
-        console.log(JSON.stringify(this.contagios));
         return resultado;
     }
 
