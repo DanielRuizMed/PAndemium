@@ -19,7 +19,12 @@ estado.
 
 ### Herramientas
 
-- Gestor de tareas y paquetes
+- Gestor de tareas
+
+	He elegido **grunt** frente a gulp, puesto a que son los dos muy conodidos grunt dispone
+	de mas plugins que facilitan la automatización de tareas.
+
+- Gestor paquetes
 
 	Como gestor de paquetes he elegido **npm** ante yarn, ya que es el más conocido y el que 		mejor se adapta para resolver el problema. 
 	Como fichero encargado de gestionar las tareas he decidido usar package.json .

@@ -6,7 +6,13 @@ Ejecutamos la clase principal (provisional hasta montar la API REST)
 
 	node src/class/pandemiun.js
 
-### Test
+### Test con grunt
+
+	cd pandemiun
+
+	grunt
+	
+### Test (otra forma)
 Primero nos descargamos todas las dependencias
 
 	cd pandemiun
