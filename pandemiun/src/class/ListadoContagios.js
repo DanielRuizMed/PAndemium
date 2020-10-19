@@ -74,7 +74,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
                 });
 
                 if( creado == 0 ){ //si no esta creada
-                    console.log("entra1");
+                    
                     let datos_nuevos = {
                         "fecha": fecha_hoy,
                         "contagiados": "0",
@@ -88,7 +88,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
 
                     it.fechas.push(datos_nuevos);
                 }else{//ya existe
-                    console.log("entra2");
+                    
                     it.fechas.filter( function(it){//vemos si existe la fecha creada en la provincia
                         if( it.fecha == fecha_hoy ){
                             
@@ -108,10 +108,6 @@ class ListadoContagios //clase que procesa la lógica de los datos
         } );
 
         return resultado;
-    }
-
-    add (nick,provincia,estado) {
-
     }
 
     exits(provincia){
