@@ -1,11 +1,12 @@
-const li = require('./ListadoContagios.js')
+const li = require('./ListadoContagios.js');
+const us = require('./ListadoUsuarios.js')
 
 class Pandemiun //clase que procesa la lógica de los datos
 {
 
     constructor() { 
 
-        console.log(this.getDatos("Granada","2020-10-13"));
+        
     }
 
     getDatos (provincia,fecha) {
@@ -20,7 +21,30 @@ class Pandemiun //clase que procesa la lógica de los datos
 
     updateDatos (nick,provincia,estado) {
 
+        let resultado = "nick, provincia o estado sin rellenar";
+        let operacion;
         
+        //*** TAREA: crear lista de provincias y estados fija */
+        if( nick && provincia && estado ){
+
+            if( us.exist(nick) ){
+
+                operacion = us.update(nick,provincia,estado);
+                if( li.exits(provincia) ){
+
+                    resultado = li.update(provincia,estado,operacion);
+                    if( resultado != 0 ) resultado = "actualización correcta"
+    
+                }else{
+                    resultado = "la provincia no existe";
+                }
+
+            }else{
+                resultado = "el nick no existe";
+            }
+        }
+
+        return resultado;
     }
 
     addDatos (nick,provincia,estado) {
