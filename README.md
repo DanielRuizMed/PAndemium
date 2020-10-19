@@ -17,9 +17,23 @@ estado.
 
 ---
 
-### Herramientas y Motivo (librerías test)
+### Herramientas
 
-Las herramientas que se han elegido asi como el motivo de las mimas y la idea de la aplicación se encuentran en el siguiente [enlace](docs/motivo.md)
+- Gestor de tareas y paquetes
+	Como gestor de paquetes he elegido **npm** ante yarn, ya que es el más conocido y el que 		mejor se adapta para resolver el problema. 
+	Como fichero encargado de gestionar las tareas he decidido usar package.json .
+
+- Framework para pruebas en Node.js
+	Para la realización de test he utilizado **Mocha** por se uno de los más conocidos para
+	realizar test unitarios, tambien he visto que se puede testear de una
+	forma más profunda que con otras herramientas conocidas como Jest.
+
+- Biblioteca de asserciones
+	He utilizado **chai** y tambien **chai-http**, ya que al se
+	una API Rest no solo debemos testear que las clases/funciones cumplen con los test
+	si no que todas las peticiones HTTP reciben la respuesta deseada.
+
+[motivo elección de otras herramientas](docs/motivo.md)
 
 ---
 
