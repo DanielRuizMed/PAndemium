@@ -6,7 +6,6 @@ class Pandemiun //clase que procesa la lógica de los datos
 
     constructor() { 
 
-        
     }
 
     getDatos (provincia,fecha) {
@@ -49,7 +48,24 @@ class Pandemiun //clase que procesa la lógica de los datos
 
     addDatos (nick,provincia,estado) {
 
+        let resultado = "nick, provincia o estado sin rellenar";
+        let operacion;
         
+        //*** TAREA: crear lista de provincias y estados fija */
+        if( nick && provincia && estado ){
+
+            if( !us.exist(nick) ){
+
+                us.add(nick,provincia);
+                resultado = this.updateDatos(nick,provincia,estado);
+                if( resultado == "actualización correcta" ) resultado = "añadido correctamente";
+
+            }else{
+                resultado = "el nick existe";
+            }
+        }
+
+        return resultado;
     }
 
 }
