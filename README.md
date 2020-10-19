@@ -40,12 +40,6 @@ estado.
 
 ---
 
-### Archivo iv.yaml
-
-[archivo](iv.yaml)
-
----
-
 ### Como hacer funcionar la aplicación (Despliegue) y test
 
 Pasos que se deben seguir para ejecutar o realizar test del programa en este [enlace](docs/despliegue.md).
@@ -56,15 +50,11 @@ Pasos que se deben seguir para ejecutar o realizar test del programa en este [en
 
 La dirección del milestone es [esta.](https://github.com/DanielRuizMed/PAndemium/milestone/7)
 
-- [Pasos](docs/pasos.md), donde están los issues y una descripción general.
-- [Clases](pandemiun/src/class), con las clases creadas.
-- [Test](pandemiun/test)
-
----
-
-### Historias de Usuario
-
-[Historias](https://github.com/DanielRuizMed/PAndemium/milestone/9).
+- [Pasos explicados con issues](docs/pasos.md), donde están los issues y una descripción general.
+- [Clases implementadas](pandemiun/src/class), con las clases creadas.
+- [Test y clases de test](pandemiun/test)
+- [Historias de Usuario](https://github.com/DanielRuizMed/PAndemium/milestone/9).
+- [iv.yaml](iv.yaml)
 
 ---
 
