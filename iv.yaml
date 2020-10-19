@@ -1,4 +1,4 @@
 entidad: pandemiun/src/class/pandemiun.js
 lenguaje: JavaScript
 test: pandemiun/test/test.js
-taskfile: pandemiun/package.json
+taskfile: pandemiun/Gruntfile.js
