@@ -14,7 +14,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
                         "sin_sintomas":"400",
                         "sintomas_graves":"20"
                     },
-                    {   "fecha":"2020-10-14",
+                    {   "fecha":"2020-10-19",
                         "contagiados":1,
                         "curados":"0",
                         "sintomas_leves":"0",
@@ -34,7 +34,9 @@ class ListadoContagios //clase que procesa la lógica de los datos
                     }
                 ]
             }
-        ]
+        ];
+
+        this.formatYmd = date => date.toISOString().slice(0, 10);
         
     }
 
@@ -58,13 +60,69 @@ class ListadoContagios //clase que procesa la lógica de los datos
         return resultado;
     }
 
-    update (nick,provincia,estado) {
+    update (provincia,estado,ultimo_estado) {
 
+        let creado=0, resultado=0;
+        let fecha_hoy = this.formatYmd(new Date());
 
+        this.contagios.filter( function(it){
+
+            if( it.provincia === provincia ){
+                
+                it.fechas.filter( function(it){//vemos si existe la fecha creada en la provincia
+                    if( it.fecha == fecha_hoy ) creado = 1; 
+                });
+
+                if( creado == 0 ){ //si no esta creada
+                    console.log("entra1");
+                    let datos_nuevos = {
+                        "fecha": fecha_hoy,
+                        "contagiados": "0",
+                        "curados": "0",
+                        "sintomas_leves": "0",
+                        "sin_sintomas": "0",
+                        "sintomas_graves": "0"
+                    }
+
+                    datos_nuevos[estado] = "1";
+
+                    it.fechas.push(datos_nuevos);
+                }else{//ya existe
+                    console.log("entra2");
+                    it.fechas.filter( function(it){//vemos si existe la fecha creada en la provincia
+                        if( it.fecha == fecha_hoy ){
+                            
+                            if( ultimo_estado != 0 ){
+
+                                it[ultimo_estado] = parseInt(it[ultimo_estado]) - 1;
+                                resultado = it[estado] = parseInt(it[estado]) + 1;
+                            }else{
+
+                                resultado = it[estado] = parseInt(it[estado]) + 1;
+                            }
+                        } 
+                    });
+
+                }
+            }
+        } );
+
+        console.log(JSON.stringify(this.contagios));
+        return resultado;
     }
 
     add (nick,provincia,estado) {
 
+    }
+
+    exits(provincia){
+
+        let resultado = false;
+
+		if ( this.contagios.filter(it => it.provincia === provincia ) != undefined )
+			resultado = true;
+
+		return resultado;
     }
 }
 
