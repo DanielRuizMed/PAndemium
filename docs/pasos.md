@@ -2,12 +2,11 @@
 
 Milestone del hito 2 [enlace](https://github.com/DanielRuizMed/PAndemium/milestone/7).
 
-- [Classe connectBD](https://github.com/DanielRuizMed/PAndemium/issues/27), con la implementación de los metodos.
-- [Clase pandemiun.js](https://github.com/DanielRuizMed/PAndemium/issues/28), con la implementación de los metodos.
-- [Datos json y carpeta contenedora](https://github.com/DanielRuizMed/PAndemium/issues/29), archivos donde se recogen los datos a consultar-modificar de la aplicación.
-- [Test para consultar datos](https://github.com/DanielRuizMed/PAndemium/issues/30), test unitarios sobre la consulta de datos(método).
-- [Test para actualizar datos](https://github.com/DanielRuizMed/PAndemium/issues/31), test unitarios sobre la actualización de datos(método).
-- [fichero controlador de los diferentes test](https://github.com/DanielRuizMed/PAndemium/issues/32), fichero que controla y lanza los diferentes test.
+- [Test que verifican la actualización de los estados de los usuarios](https://github.com/DanielRuizMed/PAndemium/issues/51), verifica que se devuelven los datos correctos al actualizar un estado.
+- [Test sobre consultar contagios](https://github.com/DanielRuizMed/PAndemium/issues/50), verifica que se devuelven los datos correctos al consultar algo.
+- [Registro de usuario y actualizacion de número de contagios, métodos](https://github.com/DanielRuizMed/PAndemium/issues/49), registra un nuevo usuario y actualiza su estado en la lista con el recuento.
+- [Actualizar estado y contagios, métodos](https://github.com/DanielRuizMed/PAndemium/issues/48), método que pasando un nick, estado y provincia actualiza tus datos y la lista de recuento de contagios.
+- [Consultar contagios, creación de métodos](https://github.com/DanielRuizMed/PAndemium/issues/47), método que pasando una provincia y fecha te devuelce en json los contagios.
 - [gestor de tareas package.json](https://github.com/DanielRuizMed/PAndemium/issues/33).
 - [Documento con motivos de herramientas](https://github.com/DanielRuizMed/PAndemium/issues/34).
 - [documento despliegue](https://github.com/DanielRuizMed/PAndemium/issues/35), se explica como ejecutar, instalar dependencias y lanzar test.

@@ -5,7 +5,7 @@ class Pandemiun //clase que procesa la lógica de los datos
 {
 
     constructor() { 
-
+        
     }
 
     getDatos (provincia,fecha) {

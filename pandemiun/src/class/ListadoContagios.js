@@ -114,7 +114,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
 
         let resultado = false;
 
-		if ( this.contagios.filter(it => it.provincia === provincia ) != undefined )
+		if ( this.contagios.filter(it => it.provincia === provincia )[0] != undefined )
 			resultado = true;
 
 		return resultado;

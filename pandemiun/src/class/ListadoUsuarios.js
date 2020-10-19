@@ -42,7 +42,7 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
 			if( it.nick === nick ){
 
 				if( it.fecha == fecha_hoy ){ 
-					misma_fecha = 1;
+					//misma_fecha = 1;
 					ultimo_estado = it.estado;
 				}else{ 
 					it.fecha = fecha_hoy;  
