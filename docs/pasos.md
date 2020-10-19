@@ -2,6 +2,9 @@
 
 Milestone del hito 2 [enlace](https://github.com/DanielRuizMed/PAndemium/milestone/7).
 
+- [testeando excepciones de actualización de datos](https://github.com/DanielRuizMed/PAndemium/issues/55)
+- [testeando las excepciones de consulta](https://github.com/DanielRuizMed/PAndemium/issues/54)
+- [añadiendo excepciones a los métodos de pandemiun.js](https://github.com/DanielRuizMed/PAndemium/issues/52), cambiando mensajes por excepciones.
 - [Test que verifican la actualización de los estados de los usuarios](https://github.com/DanielRuizMed/PAndemium/issues/51), verifica que se devuelven los datos correctos al actualizar un estado.
 - [Test sobre consultar contagios](https://github.com/DanielRuizMed/PAndemium/issues/50), verifica que se devuelven los datos correctos al consultar algo.
 - [Registro de usuario y actualizacion de número de contagios, métodos](https://github.com/DanielRuizMed/PAndemium/issues/49), registra un nuevo usuario y actualiza su estado en la lista con el recuento.
