@@ -26,7 +26,7 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
 
 		let resultado = false;
 
-		if ( this.usuarios.filter(it => it.nick === nick ) != undefined )
+		if ( this.usuarios.filter(it => it.nick === nick )[0] != undefined )
 			resultado = true;
 
 		return resultado;
@@ -58,8 +58,16 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
 
     }
 
-    add (nick,provincia,estado) {
+    add (nick,provincia) {
 
+		let datos_nuevos = {
+			"nick":nick,
+			"fecha":"2019-00-00",
+			"estado":"sin_calisificar",
+			"provincia":provincia
+		}
+
+		this.usuarios.push(datos_nuevos);
     }
 }
 
