@@ -14,6 +14,8 @@ class Pandemiun //clase que procesa la lógica de los datos
         
         if( /^\d{4}-\d{2}-\d{2}$/.test(fecha) && provincia )
             resultado = li.select(provincia,fecha);
+        else
+            throw new Error(resultado);
 
         return resultado;
     }
@@ -43,6 +45,9 @@ class Pandemiun //clase que procesa la lógica de los datos
             }
         }
 
+        if( resultado != "actualización correcta" )
+            throw new Error(resultado);
+
         return resultado;
     }
 
@@ -64,6 +69,9 @@ class Pandemiun //clase que procesa la lógica de los datos
                 resultado = "el nick existe";
             }
         }
+
+        if( resultado != "añadido correctamente" )
+            throw new Error(resultado);
 
         return resultado;
     }
