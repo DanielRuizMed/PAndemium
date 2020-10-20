@@ -21,25 +21,20 @@ estado.
 
 - Gestor de tareas
 
-	He elegido **grunt** frente a gulp, puesto a que son los dos muy conodidos grunt dispone
-	de mas plugins que facilitan la automatización de tareas.
+	He elegido **grunt** frente a gulp, puesto a que grunt dispone de mas plugins que 		facilitan la automatización de tareas.
 
 - Gestor paquetes
 
 	Como gestor de paquetes he elegido **npm** ante yarn, ya que es el más conocido y el que 		mejor se adapta para resolver el problema. 
 	Como fichero encargado de gestionar las tareas he decidido usar package.json .
 
-- Framework para pruebas en Node.js
+- Marco de test en Node.js
 
-	Para la realización de test he utilizado **Mocha** por se uno de los más conocidos para
-	realizar test unitarios, tambien he visto que se puede testear de una
-	forma más profunda que con otras herramientas conocidas como Jest.
+	Para la realización de test he utilizado **Mocha** frente a Jest para realizar test  		unitarios y por que dispone de funcionalidades de testeo más profundas que creo que se 		adaptan mejor a las necesidades del proyecto.
 
 - Biblioteca de asserciones
 
-	He utilizado **chai** y tambien **chai-http**, ya que al se
-	una API Rest no solo debemos testear que las clases/funciones cumplen con los test
-	si no que todas las peticiones HTTP reciben la respuesta deseada.
+	He utilizado **chai** para ampliar las asserciones de Mocha y tambien **chai-http**, ya 	que al se una API Rest no solo debemos testear que las clases/funciones, también interesa 		testear que las distintas peticiones http reciben respuestas esperadas.
 
 [motivo elección de otras herramientas](docs/motivo.md)
 
