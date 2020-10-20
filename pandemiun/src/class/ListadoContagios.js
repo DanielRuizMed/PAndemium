@@ -85,7 +85,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
                     }
 
                     datos_nuevos[estado] = "1";
-
+                    resultado = 1;
                     it.fechas.push(datos_nuevos);
                 }else{//ya existe
                     
