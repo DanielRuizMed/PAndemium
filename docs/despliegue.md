@@ -12,6 +12,9 @@ Ejecutamos la clase principal (provisional hasta montar la API REST)
 
 	grunt
 	
+Imagen con resultado de ejecución
+![imagen](img/hito2_1.png)
+
 ### Test (otra forma)
 Primero nos descargamos todas las dependencias
 
