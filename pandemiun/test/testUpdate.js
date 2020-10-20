@@ -25,7 +25,7 @@ describe('Capacidad de actualizar los datos de un usuarios', () => {
             expect( pandemiun.updateDatos.bind("","","") ).to.throw("nick, provincia o estado sin rellenar");
         });
 
-        it('3.4 solo 1 valor vacio', function() {
+        it('3.5 solo 1 valor vacio', function() {
             expect( pandemiun.updateDatos.bind("","Granada","contagiados") ).to.throw("nick, provincia o estado sin rellenar");
         });
 
