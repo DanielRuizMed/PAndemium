@@ -2,4 +2,4 @@ name: 'pandemiun'
 description: 'Greet someone and record the time'
 runs:
   using: 'docker'
-  image: 'pandemiun/Dockerfile'
+  image: 'pandemiun/Dockerfile' 
