@@ -55,4 +55,4 @@ EL tiempo de construir es:
 
 EL tiempo de ejecucción es:
 
-    ![tiempo ejecucción](docs/img/hito3/hito3_3.png)
+    ![tiempo ejecucción](docs/img/hito3/hito3_3.png) 
