@@ -89,4 +89,4 @@ Accede al [milestone que agrupa los issues.](https://github.com/DanielRuizMed/PA
 - [Configuración git](https://github.com/DanielRuizMed/PAndemium/blob/master/docs/config.md)
 
 ### Enlaces externos utilizados, fuentes utilizadas para el aprendizaje
-- [API REST y Node.js](https://www.youtube.com/watch?v=bK3AJfs7qNY) 
+- [API REST y Node.js](https://www.youtube.com/watch?v=bK3AJfs7qNY)
