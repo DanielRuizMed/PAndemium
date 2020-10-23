@@ -1,5 +1,3 @@
-
-
 ## PAndemium
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -53,26 +51,37 @@ También he creado un [.dockerignore](../pandemiun/.dockerignore), para indicar 
 
 ---
 
-### Como hacer funcionar la aplicación (Despliegue) y test
+### Como ejecutar test desde DockerHub o GitHub (Github Container Registry)
 
-Pasos que se deben seguir para ejecutar o realizar test del programa en este [enlace](despliegue.md).
+Para ejecutar los test desde la [imagen de dockerhub](https://hub.docker.com/r/danielruizmed/pandemiun)
+
+~~~
+
+docker run -t -v pwd:/test danielruizmed/pandemiun
+
+~~~
+
+Para ejecutar los test desde la imagen de github
+
+~~~
+
+docker run -t -v pwd:/test docker.pkg.github.com/danielruizmed/pandemium/pandemiun:v1
+
+~~~
+
+Desde aquí se puede ver el [Registro de contenedores de Github](https://github.com/DanielRuizMed/PAndemium/packages/471277)
 
 ---
 
-### Milestone, pasos con issues detallados, carpeta con clases y test
+### Enlaces internos
 
-La dirección del milestone es [esta.](https://github.com/DanielRuizMed/PAndemium/milestone/7)
+Accede al [milestone que agrupa los issues.](https://github.com/DanielRuizMed/PAndemium/milestone/8)
 
 - [Pasos explicados con issues](pasos.md), donde están los issues y una descripción general.
 - [Clases implementadas](../pandemiun/src/class), con las clases creadas.
 - [Test y clases de test](../pandemiun/test)
 - [Historias de Usuario](https://github.com/DanielRuizMed/PAndemium/milestone/9).
 - [iv.yaml](../iv.yaml)
-
----
-
-### Enlaces internos
-
 - [despliegue de aplicación sin docker](despliegue.md).
 - [motivo elección herramientas](motivo.md)
 - [GitPages](https://danielruizmed.github.io/PAndemium/)
