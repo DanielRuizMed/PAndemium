@@ -12,31 +12,43 @@ La idea viene motivada por conocer el **número de contagios** y posibles contag
 
 ### Descripción del proyecto
 
-Se creará una **API REST** que será la encagada de responder las peticiones y procesar los datos en formato JSON. Cualquier usuario podrá consultar el número de contagios confirmados en una fecha y provincia de España. Cada usuario tendrá un nick desde el cual podrá actualizar su
+Se creará una **API REST** que será la encargada de responder las peticiones y procesar los datos en formato JSON. Cualquier usuario podrá consultar el número de contagios confirmados en una fecha y provincia de España. Cada usuario tendrá un nick desde el cual podrá actualizar su
 estado.
 
 ---
 
-### Herramientas
+### Elección de contenedor Base
 
-- Gestor de tareas
+Para la elección de mi contenedor Base he barajado 4 diferentes opciones:
 
-	He elegido **grunt** frente a gulp, puesto a que grunt dispone de más plugins que 		facilitan la automatización de tareas.
+1. Descargar la imagen node:14 , esta es la genérica de node y se suele elegir cuando no 
+se conoce bien las necesidades que se necesitan.
 
-- Gestor paquetes
+	De las 4 opciones es la que primero descarté debido a su gran tamaño 121,33 MB y por su   		tiempo de construcción (3 minutos y 47 segundos). A favor he de comentar que es la segunda 		imagen con el mejor tiempo a la hora de pasar los test ( 7,277 segundos ).
 
-	Como gestor de paquetes he elegido **npm** ante yarn, ya que pese a ser iguales y mucha 	gente esta migrando a yarn he visto que con npm 5, npm vuelve a ser el más elegido. 
-	Como fichero encargado de gestionar las tareas he decidido usar package.json .
+2. Probar con una imagen más reducida node:14.14.0-alpine3.10, una versión lo más reducida posible basada en Alphine Linux
 
-- Marco de test en Node.js
+	Lo que primero me atrajo de esta opción fue su pequeño tamaño 18,28 MB y su tiempo de     		construcción (1 minuto y 28,280 segundos). Lo que más me defraudo fue su tiempo de         		ejecución de los test (11,313 segundos) y que tuve que ampliar el Dockerfile debido a     		errores en la construcción de la imagen por la falta del lenguaje de órdenes bash y        		teniendo que cambiar algunas órdenes como la creación del usuario. Leyendo detalles de     		esta imagen es poco común que se instale en ella bash, git.... y por su uso termine        		descartando esta opción.
 
-	Para la realización de test he utilizado **Mocha** frente a Jest para realizar test  		unitarios por que dispone de funcionalidades de testeo más profundas que creo que se 		adaptan mejor a las necesidades del proyecto.
+3. Así que elegí node:14-slim una versión con los paquetes mínimos para que Node funcione.
 
-- Biblioteca de asserciones
+	Con un tamaño de 24,39 MB y tiempo de construcción (1 minuto y 40,395 segundos). Su tiempo 		de ejecución para los test es de 9,124 segundos. Elegí esta opción por los criterios de    		elección sobre tamaño y tiempos de construcción/ejecución, además de que no necesitaba    		modificar mi Dockerfile.
 
-	He utilizado **chai** para ampliar las asserciones de Mocha y también **chai-http**, ya 	que al se una API Rest no solo debemos testear que las clases/funciones, también interesa 		testear que las distintas peticiones http reciben respuestas esperadas.
+4. Tras analizar que en todas tenía que instalar mi gestor de tareas globalmente, busque una imagen con este ya instalado, buscando una mayor eficiencia en todo. Encontre digitallyseamless/nodejs-bower-grunt.
 
-[motivo elección de otras herramientas](docs/motivo.md)
+	En todas las imágenes que buscaba sobre grunt se incluía como gestor de dependencias      		bower, pensé si no lo utilizo pues lo elimino. Pero tras analizar bien el Dockerfile vi    		que se basaba en descargar una versión de node he instalar npm, grunt como yo mismo hacía  		en mi Dockerfile y que el tamaño 90MB, tiempo de construcción (2 minutos y 57 segundos) no 		superan el escogido anteriormente. Solo destacó en la ejecución con 6,576 segundos.
+
+También busqué imágenes con Mocha instalado pero la mayoría utilizaba versiones de node muy antiguas y me interesa construir una imagen donde yo elija con que deseo trabajar y todas superan el tamaño de la elegida.
+
+En un caso hipotético de elegir por eficiencia a la hora de realizar los test elegiría la opción 4 pero como se contemplan tanto tiempo de construcción y tamaño elijo la opción **3 node:14-slim** por tener de media lo mejor y ser la que más me ha convencido. [Vea los análisis realizados sobre las distintas opciones.](docs/contenedor_base.md)
+
+---
+
+### Dockfile y .dockerignore
+
+He creado el siguiente [Dockerfile](pandemiun/Dockerfile) siguiendo las recomendaciones de buenas prácticas, con la excepción de poner dos órdenes Run debido a la necesidad de subir el documento package.json con las dependencias a instalar.
+
+También he creado un [.dockerignore](pandemiun/.dockerignore), para indicar que contenido no quiero que se añada a la imagen.
 
 ---
 
@@ -59,6 +71,9 @@ La dirección del milestone es [esta.](https://github.com/DanielRuizMed/PAndemiu
 ---
 
 ### Enlaces internos
+
+- [despliegue de aplicación sin docker](docs/despliegue.md).
+- [motivo elección herramientas](docs/motivo.md)
 - [GitPages](https://danielruizmed.github.io/PAndemium/)
 - [Configuración git](https://github.com/DanielRuizMed/PAndemium/blob/master/docs/config.md)
 
