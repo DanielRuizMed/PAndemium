@@ -59,7 +59,7 @@ Para ejecutar los test desde la [imagen de dockerhub](https://hub.docker.com/r/d
 ~~~
 Descargamos el repositorio y **hacemos `cd pandemiun`**, tras esto:
 
-docker run -t -v pwd:/test danielruizmed/pandemiun:lastest
+docker run -t -v pwd:/test danielruizmed/pandemiun
 
 ~~~
 
