@@ -6,9 +6,10 @@ RUN apt-get update -y && \
     useradd -r -u 5000 daniel && \
     npm install -g grunt-cli --no-optional --no-install-recommends
 
-WORKDIR /home/daniel/pandemiun
+WORKDIR /test
 
-COPY . /home/daniel/pandemiun/
+COPY package*.json /test/
+COPY Gruntfile.js /test/
 
 #Segundo RUN necesitamos package.json para instalar dependecias y borramos lo que no necesitamos
 RUN npm install --no-optional --no-install-recommends && \
