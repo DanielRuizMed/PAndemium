@@ -18,7 +18,7 @@ estado.
 
 ### Elección de contenedor Base
 
-Para la elección de mi contenedor Base he barajado 4 diferentes opciones:
+Para la elección de la imagen de mi contenedor Base he barajado 4 diferentes opciones:
 
 1. Descargar la imagen node:14 , esta es la genérica de node y se suele elegir cuando no 
 se conoce bien las necesidades que se necesitan.
@@ -52,6 +52,8 @@ También he creado un [.dockerignore](../pandemiun/.dockerignore), para indicar 
 ---
 
 ### Como ejecutar test desde DockerHub o GitHub (Github Container Registry)
+
+Descargamos el repositorio y **hacemos `cd pandemiun`**, tras esto:
 
 Para ejecutar los test desde la [imagen de dockerhub](https://hub.docker.com/r/danielruizmed/pandemiun)
 
