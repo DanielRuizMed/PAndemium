@@ -73,7 +73,7 @@ docker run -t -v pwd:/test docker.pkg.github.com/danielruizmed/pandemium/pandemi
 
 ~~~
 
-Desde aquí se puede ver el [Registro de contenedores de Github](https://github.com/DanielRuizMed/PAndemium/packages/471277)
+Desde aquí se puede ver el [Registro de contenedores de Github](https://github.com/DanielRuizMed/PAndemium/packages/473026)
 
 ---
 
