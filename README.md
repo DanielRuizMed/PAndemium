@@ -54,7 +54,7 @@ También he creado un [.dockerignore](pandemiun/.dockerignore), para indicar que
 ### Cómo ejecutar test desde DockerHub o GitHub (Github Container Registry)
 
 
-Para ejecutar los test desde la [imagen de dockerhub](https://hub.docker.com/r/danielruizmed/pandemiun)
+Para ejecutar los test desde la [imagen de dockerhub](https://hub.docker.com/r/danielruizmed/pandemium)
 
 ~~~
 Descargamos el repositorio y **hacemos `cd pandemiun`**, tras esto:
