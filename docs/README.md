@@ -68,7 +68,7 @@ Para ejecutar los test desde la imagen de github
 
 Descargamos el repositorio y **hacemos `cd pandemiun`**, tras esto:
 
-docker run -t -v pwd:/test docker.pkg.github.com/danielruizmed/pandemium/pandemium:lastest
+docker run -t -v pwd:/test docker.pkg.github.com/danielruizmed/pandemium/pandemium
 
 ~~~
 
