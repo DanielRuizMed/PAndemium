@@ -45,9 +45,9 @@ En un caso hipotético de elegir por eficiencia a la hora de realizar los test e
 
 ### Dockfile y .dockerignore
 
-He creado el siguiente [Dockerfile](../pandemiun/Dockerfile) siguiendo las recomendaciones de buenas prácticas, con la excepción de poner dos órdenes Run debido a la necesidad de subir el documento package.json con las dependencias a instalar.
+He creado el siguiente [Dockerfile](../Dockerfile) siguiendo las recomendaciones de buenas prácticas, con la excepción de poner dos órdenes Run debido a la necesidad de subir el documento package.json con las dependencias a instalar.
 
-También he creado un [.dockerignore](../pandemiun/.dockerignore), para indicar que contenido no quiero que se añada a la imagen.
+También he creado un [.dockerignore](../.dockerignore), para indicar que contenido no quiero que se añada a la imagen.
 
 ---
 
@@ -56,7 +56,7 @@ También he creado un [.dockerignore](../pandemiun/.dockerignore), para indicar 
 Para ejecutar los test desde la [imagen de dockerhub](https://hub.docker.com/r/danielruizmed/pandemium)
 
 ~~~
-Descargamos el repositorio y **hacemos `cd pandemiun`**, tras esto:
+Descargamos el repositorio , tras esto:
 
 docker run -t -v pwd:/test danielruizmed/pandemium
 
@@ -66,7 +66,7 @@ Para ejecutar los test desde la imagen de github
 
 ~~~
 
-Descargamos el repositorio y **hacemos `cd pandemiun`**, tras esto:
+Descargamos el repositorio, tras esto:
 
 docker run -t -v pwd:/test docker.pkg.github.com/danielruizmed/pandemium/pandemium
 
@@ -81,8 +81,8 @@ Desde aquí se puede ver el [Registro de contenedores de Github](https://github.
 Accede al [milestone que agrupa los issues.](https://github.com/DanielRuizMed/PAndemium/milestone/8)
 
 - [Pasos explicados con issues](pasos.md), donde están los issues y una descripción general.
-- [Clases implementadas](../pandemiun/src/class), con las clases creadas.
-- [Test y clases de test](../pandemiun/test)
+- [Clases implementadas](../src/class), con las clases creadas.
+- [Test y clases de test](../test)
 - [Historias de Usuario](https://github.com/DanielRuizMed/PAndemium/milestone/9).
 - [iv.yaml](../iv.yaml)
 - [despliegue de aplicación sin docker](despliegue.md).

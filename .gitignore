@@ -2,5 +2,5 @@
 # As part of https://github.com/github/gitignore
 
 # precompiled files
-pandemiun/node_modules
+node_modules
 
