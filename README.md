@@ -51,6 +51,10 @@ También he creado un [.dockerignore](.dockerignore), para indicar que contenido
 
 ---
 
+### DockerHub
+
+Para crear la imagen en [dockerhub](https://hub.docker.com/r/danielruizmed/pandemium) se ha cosntruido un [build](docs/github_builds.md).
+
 ### Cómo ejecutar test desde DockerHub o GitHub (Github Container Registry)
 
 
