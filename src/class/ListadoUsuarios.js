@@ -2,23 +2,11 @@
 class ListadoUsuarios //clase que procesa la lógica de los datos
 {
 
-    constructor() 
+    constructor(datos) 
     {
-		this.usuarios = 
-			[ 
-				{ 	"nick" : "Pepe",
-					"fecha":"2020-10-13",
-					"estado":"contagidos",
-					"provincia":"Granada"
-				},
-				{ 	"nick":"Juan",
-					"fecha":"2020-10-14",
-					"estado":"contagiados",
-					"provincia":"Granada"
-				}
-			];
-
-			this.formatYmd = date => date.toISOString().slice(0, 10);
+		this.usuarios = require(datos);
+			
+		this.formatYmd = date => date.toISOString().slice(0, 10);
         
     }
 
@@ -71,4 +59,4 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
     }
 }
 
-module.exports = new ListadoUsuarios(); 
+module.exports = ListadoUsuarios; 

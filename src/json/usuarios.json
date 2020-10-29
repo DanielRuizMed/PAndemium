@@ -1,0 +1,12 @@
+[ 
+    { 	"nick" : "Pepe",
+        "fecha":"2020-10-13",
+        "estado":"contagidos",
+        "provincia":"Granada"
+    },
+    { 	"nick":"Juan",
+        "fecha":"2020-10-14",
+        "estado":"contagiados",
+        "provincia":"Granada"
+    }
+]
