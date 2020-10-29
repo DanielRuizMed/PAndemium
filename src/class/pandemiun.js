@@ -1,11 +1,12 @@
-const li = require('./ListadoContagios.js');
-const us = require('./ListadoUsuarios.js')
+const ListadoContagios = require('./ListadoContagios.js');
+const ListadoUsuarios = require('./ListadoUsuarios.js')
 
 class Pandemiun //clase que procesa la lógica de los datos
 {
 
     constructor() { 
-        
+        this.provincias = new ListadoContagios("../json/provincias.json");
+        this.usuarios = new ListadoUsuarios("../json/usuarios.json");
     }
 
     getDatos (provincia,fecha) {
@@ -13,7 +14,7 @@ class Pandemiun //clase que procesa la lógica de los datos
         let resultado = "fecha mal o provincia vacia";
         
         if( /^\d{4}-\d{2}-\d{2}$/.test(fecha) && provincia )
-            resultado = li.select(provincia,fecha);
+            resultado = this.provincias.select(provincia,fecha);
         else
             throw new Error(resultado);
 
@@ -28,12 +29,12 @@ class Pandemiun //clase que procesa la lógica de los datos
         //*** TAREA: crear lista de provincias y estados fija */
         if( nick && provincia && estado ){
 
-            if( us.exist(nick) ){
+            if( this.usuarios.exist(nick) ){
 
-                operacion = us.update(nick,provincia,estado);
-                if( li.exits(provincia) ){
+                operacion = this.usuarios.update(nick,provincia,estado);
+                if( this.provincias.exits(provincia) ){
 
-                    resultado = li.update(provincia,estado,operacion);
+                    resultado = this.provincias.update(provincia,estado,operacion);
                     if( resultado != 0 ) resultado = "actualización correcta"
     
                 }else{
@@ -59,9 +60,9 @@ class Pandemiun //clase que procesa la lógica de los datos
         //*** TAREA: crear lista de provincias y estados fija */
         if( nick && provincia && estado ){
 
-            if( !us.exist(nick) ){
+            if( !this.usuarios.exist(nick) ){
 
-                us.add(nick,provincia);
+                this.usuarios.add(nick,provincia);
                 resultado = this.updateDatos(nick,provincia,estado);
                 if( resultado == "actualización correcta" ) resultado = "añadido correctamente";
 
