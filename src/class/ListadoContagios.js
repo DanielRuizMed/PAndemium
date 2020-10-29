@@ -2,39 +2,9 @@
 class ListadoContagios //clase que procesa la lógica de los datos
 {
 
-    constructor() 
+    constructor(datos) 
     {
-	    this.contagios = [
-            {   "provincia":"Granada",
-                "fechas": [
-                    {   "fecha":"2020-10-13",
-                        "contagiados":"5",
-                        "curados":"10",
-                        "sintomas_leves":"100",
-                        "sin_sintomas":"400",
-                        "sintomas_graves":"20"
-                    },
-                    {   "fecha":"2020-10-19",
-                        "contagiados":1,
-                        "curados":"0",
-                        "sintomas_leves":"0",
-                        "sin_sintomas":1,
-                        "sintomas_graves":"0"
-                    }
-                ]
-            },
-            {   "provincia":"Jaen",
-                "fechas":[
-                    {   "fecha":"2020-10-13",
-                        "contagiados":"5",
-                        "curados":"10",
-                        "sintomas_leves":"100",
-                        "sin_sintomas":"400",
-                        "sintomas_graves":"20"
-                    }
-                ]
-            }
-        ];
+	    this.contagios = require(datos);
 
         this.formatYmd = date => date.toISOString().slice(0, 10);
         
@@ -121,4 +91,4 @@ class ListadoContagios //clase que procesa la lógica de los datos
     }
 }
 
-module.exports = new ListadoContagios(); 
+module.exports = ListadoContagios; 
