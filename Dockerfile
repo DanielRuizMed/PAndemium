@@ -1,19 +1,21 @@
 FROM node:14-slim
 LABEL version="0.3.0" maintainer="drm19933@gmail.com"
 
+RUN npm i -g grunt-cli && mkdir test && chown node:node test && \
+    npm uninstall -g yarn
+
+USER node
+
+WORKDIR /home/node
+
 COPY package*.json ./
 
-RUN apt-get update -y && \
-    useradd -r -u 5000 daniel && \ 
-    npm install --no-optional --no-install-recommends && \
-    npm install -g grunt-cli && \
-    rm package*.json && \
-    rm -rf /var/lib/apt/lists/*
+RUN npm i --no-optional --no-install-recommends && \
+    rm package*.json
 
 WORKDIR /test
 
-ENV PATH=/node_modules/.bin:$PATH
+RUN cp -R /home/node/* /test && rm -r /home/node/node_modules
+VOLUME [ "/test/node_modules" ]
 
-USER daniel
-
-CMD [ "grunt" ]
+CMD grunt test
