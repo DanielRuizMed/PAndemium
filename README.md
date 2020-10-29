@@ -25,7 +25,7 @@ Para la elección de la imagen del contenedor Base he barajado 4 opciones:
 
 	De las opciones es la que primero descarté debido a su gran tamaño 121,33 MB y por su   		tiempo de construcción (3 minutos y 47 segundos). A favor he de comentar que es el segundo		contendor base con el mejor tiempo a la hora de pasar los test ( 7,277 segundos ).
 
-2. Utilizar un contenedor los más reducido posible node:14.14.0-alpine3.10, basada en Alphine Linux.
+2. Utilizar un contenedor los más reducido posible node:14.14.0-alpine3.10, basada en Alpine Linux.
 
 	Lo que más me atrajo de esta opción fue su pequeño tamaño 18,28 MB y su tiempo de     		construcción (1 minuto y 28,280 segundos). Lo que más me defraudo fue su tiempo de         		ejecución de los test (11,313 segundos), además de tener que ampliar el Dockerfile debido a     	errores en la construcción de la imagen por la falta del lenguaje de órdenes bash y        		teniendo que cambiar algunas órdenes como la creación del usuario. Leyendo detalles de     		esta imagen es poco común que se instale en ella bash, git.... Terminé descartando esta opción.
 
@@ -45,7 +45,7 @@ En un caso hipotético de elegir por eficiencia a la hora de realizar los test e
 
 ### Dockfile y .dockerignore
 
-He creado el siguiente [Dockerfile](Dockerfile) siguiendo las recomendaciones de buenas prácticas, con la excepción de poner dos órdenes Run debido a la necesidad de subir el documento package.json con las dependencias a instalar.
+He creado el siguiente [Dockerfile](Dockerfile) siguiendo las recomendaciones de buenas prácticas y [optimización](docs/bn_opt.md), con la excepción de poner dos órdenes Run debido a la necesidad de subir el documento package.json con las dependencias a instalar.
 
 También he creado un [.dockerignore](.dockerignore), para indicar que contenido no quiero que se añada a la imagen.
 
