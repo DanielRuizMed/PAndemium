@@ -6,16 +6,14 @@ RUN npm i -g grunt-cli && mkdir test && chown node:node test && \
 
 USER node
 
-WORKDIR /home/node
+WORKDIR /test
 
 COPY package*.json ./
 
 RUN npm i --no-optional --no-install-recommends && \
-    rm package*.json
+    rm package*.json && \
+    rm -rf /var/lib/apt/lists/*
 
-WORKDIR /test
-
-RUN cp -R /home/node/* /test && rm -r /home/node/node_modules
 VOLUME [ "/test/node_modules" ]
 
 CMD grunt test
