@@ -9,4 +9,4 @@ build:
     ci:
         - mkdir app 
         - cd app && git clone https://github.com/DanielRuizMed/PAndemium ./
-        - cd app && docker run -t -v `pwd`:/test danielruizmed/pandemium
+        - docker run -t -v `pwd`:/test danielruizmed/pandemium
