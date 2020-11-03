@@ -1,15 +1,19 @@
-language: node_js
-node_js:
-    - 15
-    - 14
-    - 12
-    - 10
-before_script:
-    - npm install -g grunt-cli
-script: grunt test
+jobs:
+    include:
+        - language: node_js
+            name: "verificando versiones"
+            node_js:
+                - 15
+                - 14
+                - 12
+                - 10
+        before_script:
+            - npm install -g grunt-cli
+        script: grunt test
 
 
-language: minimal
-services: docker
-before_script: docker pull danielruizmed/pandemium
-script: docker run -t -v `pwd`:/test danielruizmed/pandemium
+        - language: minimal
+        name: "verificando contenedor y test"
+        services: docker
+        before_script: docker pull danielruizmed/pandemium
+        script: docker run -t -v `pwd`:/test danielruizmed/pandemium
