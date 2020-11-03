@@ -6,8 +6,6 @@ node_js:
     - 14
 
 build:
-    pre_ci:
-        - git clone https://github.com/DanielRuizMed/PAndemium ./app
-
     ci:
-        - cd app && docker run -t -v `pwd`:/test danielruizmed/pandemium ls -l
+        - git clone https://github.com/DanielRuizMed/PAndemium ./app
+        - cd app && docker run -t -v `pwd`:/test danielruizmed/pandemium
