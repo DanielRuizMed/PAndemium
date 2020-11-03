@@ -11,6 +11,7 @@ build:
         image_name: danielruizmed/pandemium
         image_tag: latest
         pull: true
+        env: FOO=bar
         options: "-e HOME=/root"
 
     ci:
