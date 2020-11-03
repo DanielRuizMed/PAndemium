@@ -9,4 +9,5 @@ build:
     ci:
         - mkdir app 
         - cd app && git clone https://github.com/DanielRuizMed/PAndemium ./
+        - npm install -g grunt-cli
         - docker run -t -v `pwd`:/test danielruizmed/pandemium
