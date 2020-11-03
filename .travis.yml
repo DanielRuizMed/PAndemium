@@ -1,10 +1,12 @@
 dist: xenial
-language: minimal
+language: php
+php:
+    - '5.6'
 
 jobs:
     include:
         - language: node_js
-            name: "verificando versiones"
+
             node_js:
                 - 15
                 - 14
@@ -16,7 +18,6 @@ jobs:
 
 
         - language: minimal
-        name: "verificando contenedor y test"
         services: docker
         before_script: docker pull danielruizmed/pandemium
         script: docker run -t -v `pwd`:/test danielruizmed/pandemium
