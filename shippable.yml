@@ -1,4 +1,5 @@
-language: node_js
+language: 
+    - minimal
 
 services: docker
 
@@ -7,7 +8,5 @@ node_js:
 
 build:
     ci:
-        - mkdir app 
-        - cd app && git clone https://github.com/DanielRuizMed/PAndemium ./
-        - npm install -g grunt-cli
+        - docker pull danielruizmed/pandemium
         - docker run -t -v `pwd`:/test danielruizmed/pandemium
