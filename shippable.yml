@@ -7,6 +7,10 @@ node_js:
     - 14
 
 build:
+    pre_ci_boot:
+        image_name: danielruizmed/pandemium
+        pull: true
+        options: "-e HOME=/root"
+        
     ci:
-        - docker pull danielruizmed/pandemium
         - docker run -t -v `pwd`:/test danielruizmed/pandemium
