@@ -8,4 +8,4 @@ node_js:
 
 build:
     ci:
-        - docker build danielruizmed/pandemium
+        - docker build danielruizmed/pandemium .
