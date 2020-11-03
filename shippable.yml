@@ -6,6 +6,6 @@ node_js:
     - 14
 
 before_script:
-    - docker pull danielruizmed/pandemium
+    - git pull danielruizmed/pandemium
 
 script: docker run -t -v `pwd`:/test danielruizmed/pandemium
