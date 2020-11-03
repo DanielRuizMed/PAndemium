@@ -1,5 +1,5 @@
 language: 
-    - minimal
+    - node_js
 
 services: docker
 
