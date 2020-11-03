@@ -6,6 +6,6 @@ node_js:
     - 14
 
 before_script:
-    - git clone https://github.com/DanielRuizMed/PAndemium
+    - git clone https://github.com/DanielRuizMed/PAndemium ./
 
-script: cd PAndemium | docker run -t -v `pwd`:/test danielruizmed/pandemium
+script: docker run -t -v `pwd`:/test danielruizmed/pandemium
