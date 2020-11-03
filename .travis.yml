@@ -7,3 +7,9 @@ node_js:
 before_script:
     - npm install -g grunt-cli
 script: grunt test
+
+
+language: minimal
+services: docker
+before_script: docker pull danielruizmed/pandemium
+script: docker run -t -v `pwd`:/test danielruizmed/pandemium
