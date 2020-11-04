@@ -6,9 +6,7 @@ Lo primero nos hemos registrado y vinculado nuestro repositorio de proyecto con 
  
 EL fichero que utiliza travis para saber o conocer qué labores ha de realizar es [.travis.yml](../.travis.yml), el cual he definido con la siguiente estructura:
  
-~
- 
-    <span style="color:blue"> #Definimos el lenguaje que se va a utilizar, en nuestro caso Nodejs </span>
+    #Definimos el lenguaje que se va a utilizar, en nuestro caso Nodejs
     language: node_js
  
     #Definimos las versiones en las que deseamos probar en travis (se explica adelante)
@@ -40,7 +38,7 @@ EL fichero que utiliza travis para saber o conocer qué labores ha de realizar e
            on_success: never
            on_failure: never
  
-~
+
  
 Hemos decidido utilizar estas versiones ya que en la [página oficial de node](https://nodejs.org/es/about/releases/) nos indica las versiones que están activas, las que siguen en mantenimiento y las que desaconsejan. He elegido estas porque son las que se siguen manteniendo.
  
