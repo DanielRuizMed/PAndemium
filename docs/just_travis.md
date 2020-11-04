@@ -8,35 +8,35 @@ EL fichero que utiliza travis para saber o conocer qué labores ha de realizar e
  
 ~
  
-   #Definimos el lenguaje que se va a utilizar, en nuestro caso Nodejs
-   language: node_js
+    <span style="color:blue"> #Definimos el lenguaje que se va a utilizar, en nuestro caso Nodejs </span>
+    language: node_js
  
-   #Definimos las versiones en las que deseamos probar en travis (se explica adelante)
-   node_js:
+    #Definimos las versiones en las que deseamos probar en travis (se explica adelante)
+    node_js:
        - 15
        - 14
        - 12
        - 10
  
-   #Le decimos que deseamos realice antes de script, en nuestro caso instalar grunt globalmente
-   before_script:
+    #Le decimos que deseamos realice antes de script, en nuestro caso instalar grunt globalmente
+    before_script:
        - npm install -g grunt-cli
       
-   #y lanzamos con nuestro task runner ejecutamos los test
-   script: grunt test
+    #y lanzamos con nuestro task runner ejecutamos los test
+    script: grunt test
  
-   #Como deseamos también verificar que nuestro contenedor de DockerHub sigue cumpliendo con los requisitos deseados se hace un job, con el lenguaje minimal ya que lo que deseamos es hacer funcionar docker y este ya contiene todo.
-   jobs:
-       include:
+    #Como deseamos también verificar que nuestro contenedor de DockerHub sigue cumpliendo con los requisitos deseados se hace un job, con el lenguaje minimal ya que lo que deseamos es hacer funcionar docker y este ya contiene todo.
+    jobs:
+        include:
            - stage: "Test sobre el contenedor"
            language: minimal
            services: docker
            before_script: docker pull danielruizmed/pandemium
            script: docker run -t -v `pwd`:/test danielruizmed/pandemium
  
-   #Hemos modificado las notificaciones cuando se producen todo estas pruebas de forma correcta o incorrecta para que no nos envie ningun mensaje
-   notifications:
-       slack:
+    #Hemos modificado las notificaciones cuando se producen todo estas pruebas de forma correcta o incorrecta para que no nos envie ningun mensaje
+    notifications:
+        slack:
            on_success: never
            on_failure: never
  
