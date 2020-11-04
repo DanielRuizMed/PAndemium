@@ -17,7 +17,7 @@ jobs:
           language: minimal
           services: docker
           before_script: docker pull danielruizmed/pandemium
-          script: docker run -t -v `pwd`:/test danielruizmed/pandemium0
+          script: docker run -t -v `pwd`:/test danielruizmed/pandemium
 
 
 notifications:
