@@ -23,11 +23,9 @@ estado.
 
 - Para [configuración de algún sistema te integración adicional](docs/just_shippable.md) he usado shippable.
 
-- uso correcto del gestor de tareas
+- [aprovechamiento de docker generado hito anterior.](docs/just_uso_contenedor.md)
 
-- aprovechamiento de docker generado hito anterior
-
-- test significatio y/o avance 
+- test significativos y/o avance 
 
 ### Historial de rúbricas
 
