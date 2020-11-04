@@ -34,7 +34,7 @@ Tras esto creamos un fichero llamado [shippable.yml](../shippable.yml) el cual u
            - npm i -g grunt-cli
            - grunt test
  
-   #También permite crear jobs y definir dependencias con sus diferentes jobs en nuestro caso no las hay
+    #También permite crear jobs y definir dependencias con sus diferentes jobs en nuestro caso no las hay
     jobs:
         - name: creando build de la imagen
         type: runSh
