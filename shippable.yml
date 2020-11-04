@@ -1,5 +1,20 @@
-services: docker
+lannguage: node_js
 
-build:
-    ci:
-        - docker build -t danielruizmed/pandemium .
+node_js:
+    - 15
+    - 14
+    - 12
+    - 10
+
+script: grunt test
+
+jobs:
+    - name: creando build de la imagen
+      type: runSh
+      dependencyMode: chrono
+      steps:
+      TASK:
+        - script: docker build -t danielruizmed/pandemium .
+
+notifications:
+    email: false
