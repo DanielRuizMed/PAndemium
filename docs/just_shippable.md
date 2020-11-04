@@ -4,17 +4,17 @@ La razón por la que he decidido aprender a utilizar shippable, aunque no hay mu
  
 Primero me he registrado con nuestra cuenta de github
  
-![vincular](docs/img/hito4/2_2.png)
+![vincular](img/hito4/2_2.png)
  
 y le hemos otorgado autorización de nuestros datos públicos y algunas permisos requeridos
  
-![autorización](docs/img/hito4/2_3.png)
-![permisos](docs/img/hito4/2_4.png)
+![autorización](img/hito4/2_3.png)
+![permisos](img/hito4/2_4.png)
  
 Tras esto buscamos el la barra lateral nuestro nombre en github y le indicamos el repositorio
  
-![listado](docs/img/hito4/2_7.png)
-![indicado](docs/img/hito4/2_8.png)
+![listado](img/hito4/2_7.png)
+![indicado](img/hito4/2_8.png)
  
 Tras esto creamos un fichero llamado [shippable.yml](../shippable.yml) el cual utiliza la web shippable para saber que debe realizar sobre nuestro repositorio, el cual he definido con la siguiente estructura:
  
@@ -50,9 +50,9 @@ Tras esto creamos un fichero llamado [shippable.yml](../shippable.yml) el cual u
 Tras esto cada vez que realizamos un push a Github podemos ver su interacción con sippable desde
 github:
  
-![acciones](docs/img/hito4/n2.png)
+![acciones](img/hito4/n2.png)
  
 o desde shippable donde podemos analizar mejor los resultados
  
-![listado](docs/img/hito4/n4.png)
-![consola](docs/img/hito4/n5.png)
+![listado](img/hito4/n4.png)
+![consola](img/hito4/n5.png)
