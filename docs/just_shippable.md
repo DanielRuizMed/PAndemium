@@ -36,12 +36,12 @@ Tras esto creamos un fichero llamado [shippable.yml](../shippable.yml) el cual u
  
    #También permite crear jobs y definir dependencias con sus diferentes jobs en nuestro caso no las hay
     jobs:
-       - name: creando build de la imagen
-       type: runSh
-       dependencyMode: chrono
-       steps:
-       TASK:
-           - script: docker build -t danielruizmed/pandemium .
+        - name: creando build de la imagen
+        type: runSh
+        dependencyMode: chrono
+        steps:
+            TASK:
+                - script: docker build -t danielruizmed/pandemium .
  
     #Ponemos que no se envien notificaciones por email
     notifications:
