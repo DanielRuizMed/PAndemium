@@ -1,3 +1,16 @@
+language: node_js
+
+node_js:
+    - 15
+    - 14
+    - 12
+    - 10
+
+build:
+    pre_ci: npm i -g grunt-cli
+    ci: grunt test
+
+
 jobs:
     - name: creando build de la imagen
       type: runSh
@@ -6,18 +19,6 @@ jobs:
       TASK:
         - script: docker build -t danielruizmed/pandemium .
 
-    - name: versiones node
-      type: runSh
-      dependencyMode: chrono
-      steps:
-      TASK:
-        - language: node_js
-          node_js:
-            - 15
-            - 14
-            - 12
-            - 10
-          script: grunt test
 
 notifications:
     email: false
