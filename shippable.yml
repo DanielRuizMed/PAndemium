@@ -7,8 +7,7 @@ node_js:
     - 10
 
 build:
-    pre_ci: npm i -g grunt-cli
-    ci: grunt test
+    ci: npm i -g grunt-cli && grunt test
 
 
 jobs:
