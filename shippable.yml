@@ -8,8 +8,7 @@ node_js:
 
 build:
     ci:
-        - npm i
-        - npm i -g grunt-cli 
+        - grunt install_dependencias
         - grunt test
 
 
