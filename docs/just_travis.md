@@ -1,6 +1,6 @@
 # Travis
  
-Lo primero nos hemos registrado y vinculado nuestro repositorio del proyecto con [travis](https://travis-ci.com/), para que cada vez que realicemos un push a dicho repositorio de Github se envíe una request a travis para que comience sus labores.
+Lo primero nos hemos registrado y vinculado nuestro repositorio de proyecto con [travis](https://travis-ci.com/), para que cada vez que realicemos un push a dicho repositorio en Github se envíe una request a travis.
  
 ![vinculacion](img/hito4/9_5.png)
  
