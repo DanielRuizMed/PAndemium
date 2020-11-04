@@ -7,9 +7,17 @@ module.exports = function(grunt) {
     // Configure a mochaTest task
     mochaTest: {
         src: ['test/**/*.js']
+    },
+    dependencias:{
+      cmd : 'npm',
+      args: [
+        'npm i && ',
+        'npm i -g grunt-cli'
+      ]
     }
     
   });
  
   grunt.registerTask('test', 'mochaTest');
+  grunt.registerTask('install_dependencias', 'dependencias');
 }
