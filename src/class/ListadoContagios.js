@@ -4,15 +4,18 @@ class ListadoContagios //clase que procesa la lógica de los datos
 
     constructor(datos) 
     {
-	    this.contagios = require(datos);
+	    var contagios = require(datos);
 
         this.formatYmd = date => date.toISOString().slice(0, 10);
         
+        this.getContagios = function(){
+            return contagios;
+        }
     }
 
     select (provincia,fecha) { 
 
-        let proc1 = this.contagios.filter(it => it.provincia === provincia );
+        let proc1 = this.getContagios().filter(it => it.provincia === provincia );
         let proc2;
         let resultado = "No hay datos de la provincia "+provincia+" en la fecha "+fecha;
 
@@ -35,7 +38,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
         let creado=0, resultado=0;
         let fecha_hoy = this.formatYmd(new Date());
 
-        this.contagios.filter( function(it){
+        this.getContagios().filter( function(it){
 
             if( it.provincia === provincia ){
                 
@@ -84,7 +87,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
 
         let resultado = false;
 
-		if ( this.contagios.filter(it => it.provincia === provincia )[0] != undefined )
+		if ( this.getContagios().filter(it => it.provincia === provincia )[0] != undefined )
 			resultado = true;
 
 		return resultado;
