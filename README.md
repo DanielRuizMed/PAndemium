@@ -25,7 +25,9 @@ estado.
 
 - [aprovechamiento de docker generado hito anterior.](docs/just_uso_contenedor.md)
 
-- test significativos y/o avance 
+- se utiliza bien el gestor de tareas tanto en [.travis.yml](.travis.yml) y [shippable](shippable.yml)
+
+- test significativos y/o avance, [Milestone](https://github.com/DanielRuizMed/PAndemium/milestone/10)
 
 ### Historial de rúbricas
 
