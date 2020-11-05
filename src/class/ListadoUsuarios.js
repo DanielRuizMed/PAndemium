@@ -4,9 +4,17 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
 
     constructor(datos) 
     {
-		this.usuarios = require(datos);
+		var usuarios = require(datos);
 			
-		this.formatYmd = date => date.toISOString().slice(0, 10);
+		this.formatYmd = date => date.toISOString().slice(0, 10);7
+
+		this.getUsuarios = function (){
+			return usuarios;
+		}
+
+		this.setUsuarios = function (datos){
+			return usuarios.push(datos);
+		}
         
     }
 
@@ -14,7 +22,7 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
 
 		let resultado = false;
 
-		if ( this.usuarios.filter(it => it.nick === nick )[0] != undefined )
+		if ( this.getUsuarios().filter(it => it.nick === nick )[0] != undefined )
 			resultado = true;
 
 		return resultado;
@@ -25,7 +33,7 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
 		let fecha_hoy = this.formatYmd(new Date());
 		let ultimo_estado = 0;
 
-		this.usuarios.filter( function(it){
+		this.getUsuarios().filter( function(it){
 
 			if( it.nick === nick ){
 
@@ -55,7 +63,7 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
 			"provincia":provincia
 		}
 
-		this.usuarios.push(datos_nuevos);
+		this.setUsuarios(datos_nuevos);
     }
 }
 
