@@ -34,7 +34,7 @@ EL fichero que utiliza travis para saber o conocer qué labores ha de realizar e
  
     #Hemos modificado las notificaciones cuando se producen todo estas pruebas de forma correcta o incorrecta para que no nos envie ningun mensaje
     notifications:
-        slack:
+         email:
            on_success: never
            on_failure: never
  
