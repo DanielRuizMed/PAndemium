@@ -1,5 +1,6 @@
 const ListadoContagios = require('./ListadoContagios.js');
 const ListadoUsuarios = require('./ListadoUsuarios.js')
+const request = require('request');
 
 class Pandemiun //clase que procesa la lógica de los datos
 {
@@ -31,6 +32,7 @@ class Pandemiun //clase que procesa la lógica de los datos
             return res;
         };
 
+        console.log(this.getContagiosTotal("Andalucia"));
     }
 
     getDatos (provincia,fecha) {
@@ -101,6 +103,39 @@ class Pandemiun //clase que procesa la lógica de los datos
         return resultado;
     }
 
+
+
+    getContagiosTotal(ccaa) {
+
+        /*var resultado = '';
+
+        https.get('https://c-t.vercel.app/api?ccaa='+ccaa, (response) => {
+            let chunks_of_data = '';
+
+            response.on('data', function (fragments) {
+                chunks_of_data += fragments;
+            });
+            
+            response.on('end', function () {
+                resultado += chunks_of_data;
+                //console.log (resultado);
+            });
+
+        }).end();*/
+        
+        return new Promise((resolve, reject) => {
+            request('https://c-t.vercel.app/api?ccaa='+ccaa, (error, response, body) => {
+                if (error) reject(error);
+                if (response.statusCode != 200) {
+                    reject('Invalid status code <' + response.statusCode + '>');
+                }
+                resolve(body);
+            });
+        });
+    }
+
+
+    
 }
 
 module.exports = new Pandemiun(); 

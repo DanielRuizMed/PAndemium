@@ -6,7 +6,7 @@ class ListadoUsuarios //clase que procesa la lógica de los datos
     {
 		var usuarios = require(datos);
 			
-		this.formatYmd = date => date.toISOString().slice(0, 10);7
+		this.formatYmd = date => date.toISOString().slice(0, 10);
 
 		this.getUsuarios = function (){
 			return usuarios;
