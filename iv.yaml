@@ -2,3 +2,4 @@ entidad: src/class/pandemiun.js
 lenguaje: JavaScript
 test: test/test.js
 taskfile: Gruntfile.js
+URL: https://c-t.vercel.app/api?ccaa=Andalucia
