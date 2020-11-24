@@ -20,6 +20,13 @@ app.get('/api/confinamiento', async function (req, res) {
     res.json(resultado);
 })
 
+app.get('/api/total_contagios', async function (req, res) {
 
+    let ccaa = req.query.ccaa;
+
+    let resultado = await requestUrl('https://c-t.vercel.app/api?ccaa='+ccaa);
+
+    res.send(resultado);
+})
 
 var server = app.listen(8081);
