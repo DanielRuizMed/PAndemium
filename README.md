@@ -17,21 +17,49 @@ estado.
 
 ---
 
-### Rúbrica 4
+### Rúbricas 5
 
-- Para [integración continua funcionando y correcta justificación](docs/just_travis.md) me he decantado por travis-ci.
+- **Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo.**
 
-- Para [configuración de algún sistema te integración adicional](docs/just_shippable.md) he usado shippable.
+He decidido crear una Mini-Api en Vercel donde pasando una comunidad autónoma de España, nos devuelve
+el número total de contagiados.
 
-- [aprovechamiento de docker generado hito anterior.](docs/just_uso_contenedor.md)
+-   Realizando su [despliegue correcto y funcionando, enlazando la conexión entre Vercel/Github y explicación de función creada](docs/despliegue_serverless.md)
+-   Enlace al [repositorio contagios_total](https://github.com/DanielRuizMed/contagios_total) y enlace a la [función en vercel](https://c-t.vercel.app/api?ccaa=Andalucia)
 
-- se utiliza bien el gestor de tareas tanto en [.travis.yml](.travis.yml) y [shippable](shippable.yml)
+- **Integración dentro del proyecto general (es decir, como todo el código deberá tener sus issues y/o HU correspondientes). En esta rúbrica se valorará que se haya ido más allá del despliegue de un ejemplo.**
 
-- test significativos y/o avance, [Milestone](https://github.com/DanielRuizMed/PAndemium/milestone/10)
+- Explicación de de [código implementado, test y nuevas herramientas usadas](docs/rub5cod_her.md).
+
+Las HU creadas para este proyecto son:
+- [[HU6] Un usuario quiere poder consultar el número de contagios total de una comunidad autónoma de España](https://github.com/DanielRuizMed/PAndemium/issues/83)
+- [[HU7] Consultar si una comunidad autónoma de España está confinada o no](https://github.com/DanielRuizMed/PAndemium/issues/84)
+- [[HU8] Crear un bot de telegram que nos diga cuantas horas restan de confinamiento en Andalucía](https://github.com/DanielRuizMed/PAndemium/issues/85)
+
+[El milestone con los issues](https://github.com/DanielRuizMed/PAndemium/milestone/11). 
+
+- **Uso (e integración) de varias plataformas de despliegue (es decir, no repetir la misma función en todas las plataformas, sino crear funciones nuevas que también se integren en el proyecto). o uso de plataformas tales como Firebase o Azure functions.**
+
+He decidido crear una Mini-Api en Azure functions (en python) donde pasando una comunidad autónoma de España, nos devuelve si esta confinada o no.
+
+-   Realizando su [despliegue correcto y funcionando, enlazando la conexión entre Azure/Github y explicación de función creada](docs/despliegue_azure.md)
+-   Enlace al [repositorio confinamiento](https://github.com/DanielRuizMed/confinamiento3) y enlace a la [función en azure](https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Andalucia)
+
+- **En conjunción con la rúbrica 2, se asigna por originalidad, buena integración dentro del proyecto, tener que programarlos en un lenguaje diferente al resto del proyecto (si es que el lenguaje en que está este no está soportado en el sistema serverless), integración con un front-end web/bot de Telegram/webhook de cualquier tipo que funcione en la práctica.**
+
+Se ha creado el bot de Telegram llamado Botconfinamiento que si lo inicias te dice el tiempo de confinamiento.
+- [explicación de creación y imagenes de su uso](docs/bottele.md)
+- [Repositorio Github](https://github.com/DanielRuizMed/BotConfinamiento)
+- [enlace al bot](https://t.me/confinamiento2bot)
+
+Se ha creado la funcion en Azure functions confinamiento utilizando python. 
+-   [Repositorio Github](https://github.com/DanielRuizMed/confinamiento3)
+-   [Enlace de ejecucioón de la aplicación en Azure](https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Andalucia)
 
 ### Historial de rúbricas
 
 - [readme de rúbrica 3](docs/rub3.md)
+- [readme de rúbrica 4](docs/rub4.md)
 
 ### Enlaces internos
 
