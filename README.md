@@ -19,15 +19,15 @@ estado.
 
 ### Rúbricas 5
 
-- **Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo.**
+#### Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo.
 
 He decidido crear una Mini-Api en Vercel donde pasando una comunidad autónoma de España, nos devuelve
 el número total de contagiados.
 
--   Realizando su [despliegue correcto y funcionando, enlazando la conexión entre Vercel/Github y explicación de función creada](docs/despliegue_serverless.md)
--   Enlace al [repositorio contagios_total](https://github.com/DanielRuizMed/contagios_total) y enlace a la [función en vercel](https://c-t.vercel.app/api?ccaa=Andalucia)
+- Realizando su [despliegue correcto y funcionando, enlazando la conexión entre Vercel/Github y explicación de función creada](docs/despliegue_serverless.md)
+- Enlace al [repositorio contagios_total](https://github.com/DanielRuizMed/contagios_total) y enlace a la [función en vercel](https://c-t.vercel.app/api?ccaa=Andalucia)
 
-- **Integración dentro del proyecto general (es decir, como todo el código deberá tener sus issues y/o HU correspondientes). En esta rúbrica se valorará que se haya ido más allá del despliegue de un ejemplo.**
+#### Integración dentro del proyecto general (es decir, como todo el código deberá tener sus issues y/o HU correspondientes). En esta rúbrica se valorará que se haya ido más allá del despliegue de un ejemplo.
 
 - Explicación de de [código implementado, test y nuevas herramientas usadas](docs/rub5cod_her.md).
 
@@ -38,14 +38,14 @@ Las HU creadas para este proyecto son:
 
 [El milestone con los issues](https://github.com/DanielRuizMed/PAndemium/milestone/11). 
 
-- **Uso (e integración) de varias plataformas de despliegue (es decir, no repetir la misma función en todas las plataformas, sino crear funciones nuevas que también se integren en el proyecto). o uso de plataformas tales como Firebase o Azure functions.**
+#### Uso (e integración) de varias plataformas de despliegue (es decir, no repetir la misma función en todas las plataformas, sino crear funciones nuevas que también se integren en el proyecto). o uso de plataformas tales como Firebase o Azure functions.
 
 He decidido crear una Mini-Api en Azure functions (en python) donde pasando una comunidad autónoma de España, nos devuelve si esta confinada o no.
 
--   Realizando su [despliegue correcto y funcionando, enlazando la conexión entre Azure/Github y explicación de función creada](docs/despliegue_azure.md)
--   Enlace al [repositorio confinamiento](https://github.com/DanielRuizMed/confinamiento3) y enlace a la [función en azure](https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Andalucia)
+- Realizando su [despliegue correcto y funcionando, enlazando la conexión entre Azure/Github y explicación de función creada](docs/despliegue_azure.md)
+- Enlace al [repositorio confinamiento](https://github.com/DanielRuizMed/confinamiento3) y enlace a la [función en azure](https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Andalucia)
 
-- **En conjunción con la rúbrica 2, se asigna por originalidad, buena integración dentro del proyecto, tener que programarlos en un lenguaje diferente al resto del proyecto (si es que el lenguaje en que está este no está soportado en el sistema serverless), integración con un front-end web/bot de Telegram/webhook de cualquier tipo que funcione en la práctica.**
+#### En conjunción con la rúbrica 2, se asigna por originalidad, buena integración dentro del proyecto, tener que programarlos en un lenguaje diferente al resto del proyecto (si es que el lenguaje en que está este no está soportado en el sistema serverless), integración con un front-end web/bot de Telegram/webhook de cualquier tipo que funcione en la práctica.
 
 Se ha creado el bot de Telegram llamado Botconfinamiento que si lo inicias te dice el tiempo de confinamiento.
 - [explicación de creación y imagenes de su uso](docs/bottele.md)
@@ -55,6 +55,8 @@ Se ha creado el bot de Telegram llamado Botconfinamiento que si lo inicias te di
 Se ha creado la funcion en Azure functions confinamiento utilizando python. 
 -   [Repositorio Github](https://github.com/DanielRuizMed/confinamiento3)
 -   [Enlace de ejecucioón de la aplicación en Azure](https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Andalucia)
+
+---
 
 ### Historial de rúbricas
 
