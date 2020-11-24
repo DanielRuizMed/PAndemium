@@ -1,6 +1,4 @@
-[<< Volver a Readme](../Readme.md)
- 
-------
+
  
 Para realizar su despliegue de forma correcta nos hemos registrado en Vercel con nuestra cuenta de Github, otorgando permisos.
  
@@ -62,6 +60,3 @@ Y tras su subida a github y despliegue continuo en Vercel se nos da el siguiente
 - [Repositorio de contagios_total, Mini-Api contruida para Vercel](https://github.com/DanielRuizMed/contagios_total)
 - [función creada](https://github.com/DanielRuizMed/contagios_total/blob/main/api/index.js)
 - [archivo con datos JSON extraidos para la función, datos.json](https://github.com/DanielRuizMed/contagios_total/blob/main/api/datos.json)
-
----------
-[<< Volver a Readme](../Readme.md)

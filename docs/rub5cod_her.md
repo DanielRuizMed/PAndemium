@@ -41,4 +41,4 @@ Se ha creado en documento [index.js](../index.js) que será el controlador de nu
 También se han implementado los test para estas Mini-Api que se ejecutarán en nuestras web de integración continua travis y shippable para verificar que todo responde según lo pedido. Donde hemos utilizado chai-http para ampliar las funcionalidades de chai y poder hacer peticiones a una dirección url y analizar su resultado.
  
 - [Test sobre la Mini-API contagiados_total](../test/testContagios_total.js)
-- [Test sobre la Mini-API confinados](../test/Confinados.js)
+- [Test sobre la Mini-API confinados](../test/testConfinamiento.js)

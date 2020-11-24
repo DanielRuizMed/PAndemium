@@ -1,5 +1,4 @@
-[<< Volver a Readme](../Readme.md)
----
+
 
 Para realizar su despliegue de forma correcta nos hemos registrado en Azure functions y nos vamos a nuestro portal.
 
@@ -60,5 +59,3 @@ Y tras su subida a github y despliegue continuo en Azure functions se nos da el 
 - [Repositorio de confinamiento, Mini-Api contruida para Azure](https://github.com/DanielRuizMed/confinamiento3)
 - [función creada](https://github.com/DanielRuizMed/confinamiento3/blob/main/Confinamiento/__init__.py)
  
----
-[<< Volver a Readme](../Readme.md)
