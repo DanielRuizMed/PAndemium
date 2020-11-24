@@ -4,23 +4,23 @@
  
 Para realizar su despliegue de forma correcta nos hemos registrado en Vercel con nuestra cuenta de Github, otorgando permisos.
  
-![registro y permisos](img/1_1.png)
+![registro y permisos](img/hito5/1_1.png)
  
 En nuestro perfil de vercel clicamos en importar e indicamos la url de nuestro proyecto de Github que deseamos importar.
  
-![importar proyecto](img/1_2.png)
+![importar proyecto](img/hito5/1_2.png)
  
 Tras esto se importa el proyecto y se realiza el deploy sobre las direcciones proporcionadas.
  
-![importar proyecto](img/1_3.png)
+![importar proyecto](img/hito5/1_3.png)
  
 La facilidad de Vercel es que cuando indicamos el proyecto a importar, si no tenemos instalado Vercel como integración en nuestro proyecto, se instala para que cada vez que se realice un push o pull_request a nuestro repositorio de Github se actualice en Vercel. (**despliegue continua**)
  
-![integración proyecto](img/1_4.png)
+![integración proyecto](img/hito5/1_4.png)
  
 Ejemplo de push a nuestro proyecto con deploy en Vercel
  
-![deploy vercel](img/1_5.png)
+![deploy vercel](img/hito5/1_5.png)
  
  
  
@@ -54,7 +54,7 @@ Para su correcto **funcionamiento** se ha creado la siguiente función, siguiend
  
 Y tras su subida a github y despliegue continuo en Vercel se nos da el siguiente enlace [https://c-t.vercel.app/api?ccaa=Andalucia](https://c-t.vercel.app/api?ccaa=Andalucia), donde pasando la comunidad podemos obtener el resultado deseado:
  
-![web con ccaa](img/1_6.png)
+![web con ccaa](img/hito5/1_6.png)
 
 
 # Enlaces
