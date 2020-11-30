@@ -116,7 +116,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
 
     confinamiento(ccaa){
 
-        let result = this.getConfinamiento().filter(it => it.ccaa === ccaa )[0]
+        let result = this.getConfinamiento()[ccaa];
 
         if ( result == undefined ){
             throw new Error("Esa comunidad autonoma no existe");
