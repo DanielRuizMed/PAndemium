@@ -4,10 +4,8 @@ import json, sys
 import azure.functions as func
 
 # json con valores
-x = '{ "Andalucia":"confinada","Murcia":"confinada","Sevilla":"confinada","Canarias":"no confinada"}'
-
-# transformamos en json
-datos = json.loads(x)
+with open('../../src/json/confinamiento.json') as f:
+    datos = json.loads(f)
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
 
