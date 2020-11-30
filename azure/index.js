@@ -1,6 +1,6 @@
 
 const datos = require("./data/confinamiento.json")
-let estado = 400
+let estado = 400 
 
 //funcion handler
 module.exports = function handler(req, res) {
