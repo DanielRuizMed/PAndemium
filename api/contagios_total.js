@@ -1,5 +1,5 @@
 
-const datos = require("../src/json/contagios_total.json")
+const datos = require("./data/contagios_total.json")
 let estado = 400
 
 //funcion handler
