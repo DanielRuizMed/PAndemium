@@ -99,7 +99,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
         let result = contagios_total.filter(it => it.ccaa === ccaa )[0]
 
         if ( result == undefined ){
-            result = "Esa comunidad autonoma no existe";
+            throw new Error("Esa comunidad autonoma no existe");
         }
 
         return result;
