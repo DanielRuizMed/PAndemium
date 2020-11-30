@@ -1,7 +1,7 @@
 import logging
 import json, sys
 
-import azure.functions as func
+import azure.functions as func 
 
 # json con valores
 with open('confinamiento.json') as f:
