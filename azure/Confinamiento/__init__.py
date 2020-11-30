@@ -4,7 +4,7 @@ import json, sys
 import azure.functions as func
 
 # json con valores
-with open('../../src/json/confinamiento.json') as f:
+with open('./confinamiento.json') as f:
     datos = json.loads(f)
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
