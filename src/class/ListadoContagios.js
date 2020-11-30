@@ -6,11 +6,16 @@ class ListadoContagios //clase que procesa la lógica de los datos
     {
         var contagios = require(datos);
         var contagios_total = require("../json/contagios_total.json");
+        var contagios_total = require("../json/contagios_total.json");
 
         this.formatYmd = date => date.toISOString().slice(0, 10);
         
         this.getContagios = function(){
             return contagios;
+        }
+
+        this.getContagios_total = function(){
+            return contagios_total;
         }
     }
 
@@ -96,7 +101,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
 
     contagios_total(ccaa){
 
-        let result = contagios_total.filter(it => it.ccaa === ccaa )[0]
+        let result = this.getContagios_total().filter(it => it.ccaa === ccaa )[0]
 
         if ( result == undefined ){
             throw new Error("Esa comunidad autonoma no existe");
@@ -104,6 +109,8 @@ class ListadoContagios //clase que procesa la lógica de los datos
 
         return result;
     }
+
+    
 }
 
 module.exports = ListadoContagios; 
