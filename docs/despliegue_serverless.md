@@ -20,7 +20,7 @@ Ejemplo de push a nuestro proyecto con deploy en Vercel
  
 ![deploy vercel](img/hito5/1_5.png)
  
-La funcion que se ha subido es la siguiente, que pertenece a [ListadoContagios](../src/class/ListadoContagios.js), a la que se le ha añadido el código de estado segun la respuesta de la función y el formato mime. Esta es la [función subida a vercel](../api/index.js).
+La función que se ha subido es la siguiente, que pertenece a [ListadoContagios](../src/class/ListadoContagios.js), a la que se le ha añadido el código de estado segun la respuesta de la función y el formato mime. Esta es la [función subida a vercel](../api/index.js).
 
 ![funcion](img/hito5/1_7.png)
  
