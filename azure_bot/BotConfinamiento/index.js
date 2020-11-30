@@ -1,31 +1,53 @@
 const Telegraf = require('telegraf')
-const request = require('request');
 const { TELEGRAM_BOT_TOKEN, WEBHOOK_ADDRESS } = process.env  
- 
-const bot = new Telegraf(TELEGRAM_BOT_TOKEN, {telegram: { webhookReply: true }})  
- 
-bot.start((ctx) => {
+const bot = new Telegraf(TELEGRAM_BOT_TOKEN, {telegram: { webhookReply: true }})
 
-    ctx.reply(ctx.message);
-    //ctx.reply("Bienvenido al Bot de confinamiento de las comunidades Autonomas de España son: /n /Andalucia /n /Murcia");
+const datos = require("./confinamiento.json")
+
+bot.on('message', (msg)=>{
+
+    let mesanje = msg.text
+    let result;
+    let estado = 200
+
+    if( mesanje != undefined ){
+
+        switch(mesanje){
+            case "/start": 
+                result = "Bienvenido a Bot de Confinamiento de la comunidades Autonomas de España \n Introduce /ccaa donde <ccaa> es el nombre una comunidada( ejemplo: /Andalucia)"
+                break;
+            case "/help":
+                result = "Introduce /ccaa donde <ccaa> es el nombre una comunidada( ejemplo: /Andalucia)"
+                break;
+            default:
+
+                result = datos.filter(it => it.ccaa === mesanje )[0]
+                estado = 200
+
+                if ( result == undefined ){
+                    result = { "ccaa" : "Esa comunidad autonoma no existe"};
+                    estado = 404
+                }
+
+                break;
+        }
+
+    }
+
+    msg.reply(result);
+
+    return  {
+        headers:{
+            'Content-Type' : 'application/json'
+        },
+        statusCode: estado,
+        body: result
+    }
+
 })
 
-bot.command("Andalucia", (ctx) => {
+module.exports = async function (context, req) {
 
-    let resultado = await requestUrl('https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Andalucia');
-
-    res.json(resultado);
-
-})
-
-bot.command("Murcia", (ctx) => {
-
-    let resultado = await requestUrl('https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Murcia');
-
-    res.json(resultado);
-
-})
-
-module.exports = async function (context, req) {  
     return bot.handleUpdate(req.body, context.res) 
+    
 }
