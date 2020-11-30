@@ -1,4 +1,4 @@
-name: Deploy bot to Azure Function App
+name: Deploy cofinamiento() Azure Function App
 
 on:
   [push]
