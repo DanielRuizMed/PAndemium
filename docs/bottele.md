@@ -3,7 +3,7 @@ Se ha enlazado con una action para su deploy de forma continua en Azure function
 ![deploy azure](img/hito5/3_2.png)
 ![deploy azure](img/hito5/3_4.png)
 
-La función creada en JavaScript es la siguiente, devolviendo tanto el estado como el formato json
+La función creada en JavaScript es la siguiente en la que pasanado /ccaa nos dira si la comunidad autonoma esta confinada o no, devolviendo tanto el estado como el formato json.
 
     const Telegraf = require('telegraf')
     const { TELEGRAM_BOT_TOKEN, WEBHOOK_ADDRESS } = process.env  
