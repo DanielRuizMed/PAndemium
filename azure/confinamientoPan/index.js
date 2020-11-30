@@ -1,5 +1,5 @@
 
-const datos = require("../data/confinamiento.json")
+const datos = require("./confinamiento.json")
 let estado = 400 
 
 //funcion handler
