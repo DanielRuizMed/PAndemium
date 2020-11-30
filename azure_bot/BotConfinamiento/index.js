@@ -9,7 +9,6 @@ bot.on('message', (msg)=>{
     let mesanje = msg.text
     let result;
     let estado = 200
-
     if( mesanje != undefined ){
 
         switch(mesanje){
