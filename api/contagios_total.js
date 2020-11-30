@@ -11,12 +11,12 @@ module.exports = function handler(req, res) {
 		estado = 200
 
 		if ( result == undefined ){
-			result = "Esa comunidad autonoma no existe";
+			result = { "ccaa" : "Esa comunidad autonoma no existe"};
 			estado = 404
 		}
 
 	}else{
-		result = "No has indicado el parametro o no es el formato indicado: /api?ccaa=Andalucia"
+		result = { "ccaa" : "No has indicado el parametro o no es el formato indicado: /api?ccaa=Andalucia" }
 	}
 
 	res.setHeader('Content-type','application/json');
