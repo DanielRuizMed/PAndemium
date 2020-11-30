@@ -5,7 +5,7 @@ class ListadoContagios //clase que procesa la lógica de los datos
     constructor(datos) 
     {
         var contagios = require(datos);
-        var contagios = require("../json/contagios_total.json");
+        var contagios_total = require("../json/contagios_total.json");
 
         this.formatYmd = date => date.toISOString().slice(0, 10);
         
@@ -94,17 +94,15 @@ class ListadoContagios //clase que procesa la lógica de los datos
 		return resultado;
     }
 
-    contagios_total(){
+    contagios_total(ccaa){
 
-        let result = datos.filter(it => it.ccaa === req.query.ccaa )[0]
-
+        let result = contagios_total.filter(it => it.ccaa === ccaa )[0]
 
         if ( result == undefined ){
             result = "Esa comunidad autonoma no existe";
         }
 
         return result;
-
     }
 }
 
