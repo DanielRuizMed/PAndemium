@@ -1,0 +1,33 @@
+[ 
+    { 	
+        "ccaa":"Ceuta",
+	"numero": "2.533"
+    },
+    { 	"ccaa":"C. Leon",
+	"numero": "109.973"
+    },
+    { 	"ccaa":"Pais Vasco",
+	"numero": "88.109"
+    },
+    { 	"ccaa":"La Rioja",
+	"numero": "15.381"
+    },
+    { 	"ccaa":"Aragon",
+	"numero": "69.196"
+    },
+    { 	"ccaa":"Murcia",
+	"numero": "50.298"
+    },
+    { 	"ccaa":"Melilla",
+	"numero": "3.728"
+    },
+    { 	"ccaa":"Asturias",
+	"numero": "19.414"
+    },
+    { 	"ccaa":"Andalucia",
+	"numero": "202.491"
+    },
+    { 	"ccaa":"Madrid",
+	"numero": "334.655"
+    }
+]
