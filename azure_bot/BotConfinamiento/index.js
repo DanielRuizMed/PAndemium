@@ -4,46 +4,38 @@ const bot = new Telegraf(TELEGRAM_BOT_TOKEN, {telegram: { webhookReply: true }})
 
 const datos = require("./confinamiento.json")
 
-bot.on('message', (msg)=>{
+bot.start((ctx) => {
 
-    let mesanje = msg.text
-    let result;
-    let estado = 200
-    if( mesanje != undefined ){
+    ctx.reply("Bienvenido a Bot de Confinamiento de la comunidades Autonomas de España \n Introduce /ccaa donde <ccaa> es el nombre una comunidada( ejemplo: /Andalucia)");
+});
 
-        switch(mesanje){
-            case "/start": 
-                result = "Bienvenido a Bot de Confinamiento de la comunidades Autonomas de España \n Introduce /ccaa donde <ccaa> es el nombre una comunidada( ejemplo: /Andalucia)"
-                break;
-            case "/help":
-                result = "Introduce /ccaa donde <ccaa> es el nombre una comunidada( ejemplo: /Andalucia)"
-                break;
-            default:
+bot.command("help",(ctx) => {
 
-                result = datos.filter(it => it.ccaa === mesanje )[0]
-                estado = 200
+    ctx.reply("Introduce /ccaa donde <ccaa> es el nombre una comunidada( ejemplo: /Andalucia)");
+});
 
-                if ( result == undefined ){
-                    result = { "ccaa" : "Esa comunidad autonoma no existe"};
-                    estado = 404
-                }
+bot.command("Andalucia",(ctx) => {
 
-                break;
-        }
+    ctx.reply("confinada");
+});
 
-    }
+bot.command("Murcia",(ctx) => {
 
-    msg.reply(result);
+    ctx.reply("confinada");
+});
 
-    return  {
-        headers:{
-            'Content-Type' : 'application/json'
-        },
-        statusCode: estado,
-        body: result
-    }
 
-})
+bot.command("Sevilla",(ctx) => {
+
+    ctx.reply("confinada");
+});
+
+
+bot.command("Canarias",(ctx) => {
+
+    ctx.reply("no confinada");
+});
+
 
 module.exports = async function (context, req) {
 

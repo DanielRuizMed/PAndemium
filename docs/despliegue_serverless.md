@@ -20,43 +20,10 @@ Ejemplo de push a nuestro proyecto con deploy en Vercel
  
 ![deploy vercel](img/hito5/1_5.png)
  
+La funcion que se ha subido es la siguiente, que pertenece a [ListadoContagios](../src/class/ListadoContagios.js), a la que se le ha añadido el código de estado segun la respuesta de la función y el formato mime. Esta es la [función subida a vercel](../api/index.js).
+
+![funcion](img/hito5/1_7.png)
  
- 
-Para su correcto **funcionamiento** se ha creado la siguiente función, siguiendo las recomendaciones de la documentación de Vercel sobre una función en JavaScript. (No se pasa el nombre de las comunidades con acentos ni caracteres extraños por no reconocer estos)
- 
-    //Requiriendo datos.json, documento donde tenemos los datos en formato JSON de las comunidades.
-    const datos = require("./datos.json")
-    let estado = 400
- 
-    //función handler
-    module.exports = function handler(req, res) {
- 
-        //Verificamos que nuestra consulta es un parametro
-        if( Object.keys(req.query).length == 1 ){
-          
-            result = datos.filter(it => it.ccaa === req.query.ccaa )[0]
-            estado = 200
- 
-            //y que tenemos dicha comunidad en nuestros datos o la key es ccaa(comunidad autónoma)
-            if ( result == undefined ){
-                result = "Esa comunidad autónoma no existe";
-                estado = 400
-            }
- 
-        }else{
-            result = "No has indicado el parámetro o no es el formato indicado: /api?ccaa=Andalucia"
-        }
- 
-        res.status(estado).json(result)
-    }
- 
-Y tras su subida a github y despliegue continuo en Vercel se nos da el siguiente enlace [https://c-t.vercel.app/api?ccaa=Andalucia](https://c-t.vercel.app/api?ccaa=Andalucia), donde pasando la comunidad podemos obtener el resultado deseado:
+Y tras su subida a github y despliegue continuo en Vercel se nos da el siguiente enlace [https://pa-ndemium.vercel.app/api?ccaa=Andalucia](v), donde pasando la comunidad autonoma podemos obtener el resultado deseado:
  
 ![web con ccaa](img/hito5/1_6.png)
-
-
-# Enlaces
-
-- [Repositorio de contagios_total, Mini-Api contruida para Vercel](https://github.com/DanielRuizMed/contagios_total)
-- [función creada](https://github.com/DanielRuizMed/contagios_total/blob/main/api/index.js)
-- [archivo con datos JSON extraidos para la función, datos.json](https://github.com/DanielRuizMed/contagios_total/blob/main/api/datos.json)

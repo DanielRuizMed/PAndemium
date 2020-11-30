@@ -17,24 +17,17 @@ estado.
 
 ---
 
-### Rúbricas 5
-
-#### Despliegue correcto y funcionando, con documentación de la conexión entre el repo en GitHub y Netlify/Vercel para despliegue continuo.
-
-He decidido crear una Mini-Api en Vercel donde pasando una comunidad autónoma de España, nos devuelve
-el número total de contagiados.
+### Rúbrica 5
+Para la **rúbica 1 y 2** he decidido desplegar mi funcion [contagios_total()](src/class/ListadoContagios.js) de la clase ListadoContagios en Vercel.
 
 - Realizando su [despliegue correcto y funcionando, enlazando la conexión entre Vercel/Github y explicación de función creada](docs/despliegue_serverless.md)
-- Enlace al [repositorio contagios_total](https://github.com/DanielRuizMed/contagios_total) y enlace a la [función en vercel](https://c-t.vercel.app/api?ccaa=Andalucia)
+- Enlace de la [función en vercel](https://pa-ndemium.vercel.app/api?ccaa=Andalucia)
 
-#### Integración dentro del proyecto general (es decir, como todo el código deberá tener sus issues y/o HU correspondientes). En esta rúbrica se valorará que se haya ido más allá del despliegue de un ejemplo.
+La función implementada contagios_total() está relacionada con [HU6](https://github.com/DanielRuizMed/PAndemium/issues/83) y se ha creado el [issue #93](https://github.com/DanielRuizMed/PAndemium/issues/93) que esta relacionado con el despliegue de nuestra función en vercel.
 
-- Explicación de de [código implementado, test y nuevas herramientas usadas](docs/rub5cod_her.md).
+La función implementada confinamiento() está relacionada con [HU7](https://github.com/DanielRuizMed/PAndemium/issues/84) y se ha creado el [issue #94](https://github.com/DanielRuizMed/PAndemium/issues/94) que esta relacionado con el despliegue de nuestra función en azure functions.
 
-Las HU creadas para este proyecto son:
-- [[HU6] Un usuario quiere poder consultar el número de contagios total de una comunidad autónoma de España](https://github.com/DanielRuizMed/PAndemium/issues/83)
-- [[HU7] Consultar si una comunidad autónoma de España está confinada o no](https://github.com/DanielRuizMed/PAndemium/issues/84)
-- [[HU8] Crear un bot de telegram que nos diga cuantas horas restan de confinamiento en Andalucía](https://github.com/DanielRuizMed/PAndemium/issues/85)
+
 
 [El milestone con los issues](https://github.com/DanielRuizMed/PAndemium/milestone/11). 
 
