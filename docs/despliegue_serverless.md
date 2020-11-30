@@ -24,6 +24,6 @@ La funcion que se ha subido es la siguiente, que pertenece a [ListadoContagios](
 
 ![funcion](img/hito5/1_7.png)
  
-Y tras su subida a github y despliegue continuo en Vercel se nos da el siguiente enlace [https://pa-ndemium.vercel.app/api?ccaa=Andalucia](v), donde pasando la comunidad autonoma podemos obtener el resultado deseado:
+Y tras su subida a github y despliegue continuo en Vercel se nos da el siguiente enlace [https://pa-ndemium.vercel.app/api?ccaa=Andalucia](https://pa-ndemium.vercel.app/api?ccaa=Andalucia), donde pasando la comunidad autonoma podemos obtener el resultado deseado:
  
 ![web con ccaa](img/hito5/1_6.png)
