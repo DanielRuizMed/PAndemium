@@ -1,18 +1,30 @@
-const Telegraf = require('telegraf')  
+const Telegraf = require('telegraf')
+const request = require('request');
 const { TELEGRAM_BOT_TOKEN, WEBHOOK_ADDRESS } = process.env  
  
 const bot = new Telegraf(TELEGRAM_BOT_TOKEN, {telegram: { webhookReply: true }})  
  
 bot.start((ctx) => {
 
-    var fin_cuarentena = new Date("December 10, 2020 23:59:00");
-    var hoy = new Date();
-    var tiempo = "NO está confinada";
+    ctx.reply(ctx.message);
+    //ctx.reply("Bienvenido al Bot de confinamiento de las comunidades Autonomas de España son: /n /Andalucia /n /Murcia");
+})
 
-    if( hoy < fin_cuarentena ) tiempo = Math.round((fin_cuarentena - hoy)/ (1000*60*60));
-        
-    ctx.reply('Andalucía saldrá del confinamiento en '+tiempo +"horas");
-});
+bot.command("Andalucia", (ctx) => {
+
+    let resultado = await requestUrl('https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Andalucia');
+
+    res.json(resultado);
+
+})
+
+bot.command("Murcia", (ctx) => {
+
+    let resultado = await requestUrl('https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Murcia');
+
+    res.json(resultado);
+
+})
 
 module.exports = async function (context, req) {  
     return bot.handleUpdate(req.body, context.res) 
