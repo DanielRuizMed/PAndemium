@@ -2,18 +2,19 @@
 let chai = require('chai');
 const expect = require('chai').expect;
 
-const ListadoContagios = require('./ListadoContagios.js');
+const ListadoContagios = require('../src/class/ListadoContagios');
+const Contagios = new ListadoContagios("../json/provincias.json");
 
 describe('Tes sobre método confinamiento', () => {
 
     it('5.1 pasando una comunidad autonoma que existe', function() {
 
-        expect( ListadoContagios.confinamiento("Andalucia") ).to.have.property('ccaa').to.be.equal("Andalucia");
+        expect( Contagios.confinamiento("Andalucia") ).to.be.equal("confinada");
     });
 
-    it('5.2 pasando una comunidad autonoma que no existe', function() {
+    //it('5.2 pasando una comunidad autonoma que no existe', function() {
 
-        expect( ListadoContagios.confinamiento("Andaluca") ).to.throw("fecha mal o provincia vacia");
-    });
+    //    expect( Contagios.confinamiento.bind("Andaluca") ).to.throw("Esa comunidad autonoma no existe");
+    //});
 
 });
