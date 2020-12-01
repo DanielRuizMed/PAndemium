@@ -33,7 +33,7 @@ Para el bot de Telegram se ha relacionado con [HU7](https://github.com/DanielRui
 Para la **rúbrica 3 y 4** he implementado la función confinamiento() de la [clase ListadoContagios](src/class/ListadoContagios.js) y relacionada con la HU7 anterior mencionada.
  
 - Realizando su [despliegue correcto y funcionando, enlazando la conexión entre Azure/Github y explicación de función creada](docs/despliegue_azure.md)
-- Enlace a la [función en azure](https://confinamientopandemium.azurewebsites.net/api/Confinamiento?ccaa=Andalucia)
+- Enlace a la [función en azure](https://pandemiumconfinamiento.azurewebsites.net/api/confinamiento?ccaa=Andalucia)
  
 Se ha creado el bot de Telegram llamado Botconfinamiento que también en relación con HU7 donde si le pasamos una comunidad autónoma nos dirá si sigue confinada o no.
  

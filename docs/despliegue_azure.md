@@ -13,6 +13,6 @@ La función implementada ha sido confinamiento() de la clase [ListadoContagios](
 
 ![codigo](img/hito5/2_3.png)   
 
-Y tras su subida a github y despliegue continuo en Azure functions se nos da el siguiente enlace [https://confinamientonode.azurewebsites.net/api/confinamientoPan?ccaa=Murcia](https://confinamientonode.azurewebsites.net/api/confinamientoPan?ccaa=Murcia), donde pasando la comunidad podemos obtener el resultado deseado:
+Y tras su subida a github y despliegue continuo en Azure functions se nos da el siguiente enlace [https://pandemiumconfinamiento.azurewebsites.net/api/confinamiento?ccaa=Andalucia](https://pandemiumconfinamiento.azurewebsites.net/api/confinamiento?ccaa=Andalucia), donde pasando la comunidad podemos obtener el resultado deseado:
 
 ![web con ccaa](img/hito5/2_1.png)
