@@ -17,6 +17,6 @@ module.exports = function handler(context, req) {
         result = { "ccaa" : "No has indicado el parametro o no es el formato indicado: /api?ccaa=Andalucia" }
     }
 
-	context.res.setHeader('Content-type','application/json');
+	context.res.setHeader('Content-type','application/json')
 	context.res.status(estado).json(result)
 }
