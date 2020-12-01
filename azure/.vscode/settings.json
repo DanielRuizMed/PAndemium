@@ -1,5 +1,4 @@
 {
-    "azureFunctions.projectSubpath": "azure_bot",
     "azureFunctions.deploySubpath": ".",
     "azureFunctions.postDeployTask": "npm install",
     "azureFunctions.projectLanguage": "JavaScript",
