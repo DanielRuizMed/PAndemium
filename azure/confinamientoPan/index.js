@@ -7,7 +7,7 @@ module.exports = function handler(context, req) {
 
     if( Object.keys(req.query).length == 1 ){
         
-        result = datos[req.query.ccaa]
+        result[req.query.ccaa] = datos[req.query.ccaa]
         estado = 200
 
         if ( result == undefined ){
