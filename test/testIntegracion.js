@@ -44,4 +44,54 @@ describe('Test de integración ', () => {
             });
     });
     
+    it('6.2.1 solicitud correcta de HU4,HU5 PUT /Juan/Granada/contagiados', (done) => {
+        chai.request(server)
+            .put('/api')
+            .set("content-type","application/json")
+            .send({ nick : "Juan", provincia : "Granada", estado : "contagiados"})
+            .end( function(err,res){
+                expect( res ).to.have.status(200);
+                expect( res ).to.be.json;
+                done();
+            });
+    });
+    
+    it('6.2.2 solicitud incorrecta de HU4,HU5 PUT /Juan/Grnada/contagiados (provincia mal o que no existe)', (done) => {
+        chai.request(server)
+            .put('/api')
+            .set("content-type","application/json")
+            .send({ nick : "Juan", provincia : "Grnada", estado : "contagiados"})
+            .end( function(err,res){
+                expect( res ).to.have.status(404);
+                expect( res ).to.be.json;
+                expect( res.body ).to.be.property('status').to.be.equal("Error!");
+                done();
+            });
+    });
+    
+    it('6.2.3 solicitud correcta de HU4,HU5 PUT /Juan/Jaen/contagiados (cambiando provincia que si existe)', (done) => {
+        chai.request(server)
+            .put('/api')
+            .set("content-type","application/json")
+            .send({ nick : "Juan", provincia : "Jaen", estado : "contagiados"})
+            .end( function(err,res){
+                expect( res ).to.have.status(200);
+                expect( res ).to.be.json;
+                expect( res.body ).to.be.property('status').to.be.equal("200");
+                done();
+            });
+    });
+    
+    it('6.2.4 solicitud correcta de HU4,HU5, creando un nuevo usuario PUT /Pablo/Jaen/sin_sintomas', (done) => {
+        chai.request(server)
+            .put('/api')
+            .set("content-type","application/json")
+            .send({ nick : "Pablo", provincia : "Jaen", estado : "sin_sintomas"})
+            .end( function(err,res){
+                expect( res ).to.have.status(200);
+                expect( res ).to.be.json;
+                expect( res.body ).to.be.property('status').to.be.equal("200");
+                done();
+            });
+    });
 });
