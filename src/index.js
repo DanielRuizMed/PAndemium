@@ -3,6 +3,7 @@ const Koa = require('koa');
 const koaBody = require('koa-body');
 const Router = require('koa-router');
 const request = require('request');
+const logger = require('koa-logger');
 
 //Clases
 const pandemium = require('./class/pandemiun.js')
@@ -14,6 +15,7 @@ const router = new Router();
 
 // Set up body parsing middleware
 app.use(koaBody());
+app.use(logger());
 
 //Definimos rutas
 router.get('/api/:provincia/:fecha', (ctx, next) => {
