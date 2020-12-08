@@ -32,5 +32,45 @@ router.get('/api/:provincia/:fecha', (ctx, next) => {
 	next();
 });
 
+//Definimos rutas
+router.put('/api', (ctx, next) => {
+
+    let nick = ctx.request.body.nick;
+    let provincia = ctx.request.body.provincia;
+    let estado = ctx.request.body.estado;
+
+    ctx.body = pandemium.updateDatos(nick,provincia,estado);
+    ctx.response.type = "application/json";
+
+    if( ctx.body == "actualización correcta" ){
+        ctx.response.status = 200;
+        ctx.body = {
+            status: '200',
+            message: 'actualización correcta'
+        };
+    }else{
+
+        ctx.body = pandemium.addDatos(nick,provincia,estado);
+        ctx.response.status = 200;
+        
+
+        if( ctx.body != "añadido correctamente" ){
+            ctx.response.status = 404;
+            ctx.body = {
+                status: 'Error!',
+                message: 'Ni actualización, ni creado el nick no existe o ha sido creado, el estado y provincia puede ser errone'
+            };
+        }else{
+
+            ctx.body = {
+                status: '200',
+                message: 'añadido correctamente'
+            };
+        }
+    }
+
+	next();
+});
+
 app.use(router.routes());
 const server = app.listen(port);
