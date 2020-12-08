@@ -2,6 +2,7 @@
 const Koa = require('koa');
 const koaBody = require('koa-body');
 const Router = require('koa-router');
+const request = require('request');
 
 //Clases
 const pandemium = require('./class/pandemiun.js')
@@ -72,5 +73,37 @@ router.put('/api', (ctx, next) => {
 	next();
 });
 
+//Definimos rutas
+router.get('/total_contagios/:ccaa', async (ctx, next) => {
+
+    let ccaa = ctx.params.ccaa;
+    ctx.response.type = "application/json";
+
+    let resultado = await requestUrl('https://c-t.vercel.app/api?ccaa='+ccaa);
+
+    if( resultado == "Esa comunidad autonoma no existe" ){
+        resultado = { status: 'Error!',
+                      message : resultado }
+        ctx.response.status = 404;
+    }
+
+    ctx.body = resultado;
+   
+	next();
+});
+
+
+//funcion para hacer peticiones con promesas
+function requestUrl(url){
+    return new Promise((resolve, reject) => {
+        request(url, { json: true }, (err, res, body) => {
+            if (err) reject(err);
+            resolve(body);
+        });
+    });
+}
+
 app.use(router.routes());
 const server = app.listen(port);
+
+module.exports = { server };
