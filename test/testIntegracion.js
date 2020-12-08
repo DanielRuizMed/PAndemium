@@ -116,4 +116,26 @@ describe('Test de integración ', () => {
                 done();
             });
     });
+
+    it('6.4.1 solicitud correcta de HU7 /confinamiento/Andalucia', (done) => {
+        chai.request(server)
+            .get('/confinamiento/Andalucia')
+            .end( function(err,res){
+                expect( res ).to.have.status(200);
+                expect( res ).to.be.json;
+                expect( res.body ).to.be.property('ccaa').to.be.equal("Andalucia");
+                done();
+            });
+    });
+    
+    it('6.4.2 solicitud incorrecta de HU7 /confinamiento/Adalucia', (done) => {
+        chai.request(server)
+            .get('/confinamiento/Adalucia')
+            .end( function(err,res){
+                expect( res ).to.have.status(404);
+                expect( res ).to.be.json;
+                expect( res.body ).to.be.property('status').to.be.equal("Error!");
+                done();
+            });
+    });
 });
