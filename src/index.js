@@ -92,6 +92,27 @@ router.get('/total_contagios/:ccaa', async (ctx, next) => {
 	next();
 });
 
+//Definimos rutas
+router.get('/confinamiento/:ccaa', async (ctx, next) => {
+
+    let ccaa = ctx.params.ccaa;
+    ctx.response.type = "application/json";
+
+    let resultado = await requestUrl('https://pandemiumconfinamiento.azurewebsites.net/api/confinamiento?ccaa='+ccaa);
+
+    if( resultado == "confinada" || resultado == "no confinada" ){
+        resultado = { ccaa : ccaa,
+                      estado : resultado }
+    }else{
+        resultado = { status: 'Error!',
+                      message : resultado }
+        ctx.response.status = 404;
+    }
+
+    ctx.body = resultado;
+   
+	next();
+});
 
 //funcion para hacer peticiones con promesas
 function requestUrl(url){
