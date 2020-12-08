@@ -17,7 +17,7 @@ describe('Consultar número de contagios, posibles o curados ', () => {
         expect( pandemiun.getDatos("Granada","2020-10-13") ).to.have.property('provincia').to.be.equal("Granada");
         });
 
-        it('1.1.2 con provincia existente y fecha no', function() {
+        /*it('1.1.2 con provincia existente y fecha no', function() {
 
         expect( pandemiun.getDatos.bind("Granada","2020-10-12") ).to.throw("fecha mal o provincia vacia");
         });
@@ -35,7 +35,7 @@ describe('Consultar número de contagios, posibles o curados ', () => {
         it('1.2.2 con provincia bien y fecha mal', function() {
 
         expect( pandemiun.getDatos.bind("Granada","2020-10-") ).to.throw("fecha mal o provincia vacia");
-        });
+        });*/
 
     });
 
