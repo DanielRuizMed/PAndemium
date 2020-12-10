@@ -118,6 +118,7 @@ describe('Test de integración ', () => {
     });
 
     it('6.4.1 solicitud correcta de HU7 /confinamiento/Andalucia', (done) => {
+        setTimeout(done, 2000);
         chai.request(server)
             .get('/confinamiento/Andalucia')
             .end( function(err,res){
@@ -129,6 +130,7 @@ describe('Test de integración ', () => {
     });
     
     it('6.4.2 solicitud incorrecta de HU7 /confinamiento/Adalucia', (done) => {
+        setTimeout(done, 2000);
         chai.request(server)
             .get('/confinamiento/Adalucia')
             .end( function(err,res){
