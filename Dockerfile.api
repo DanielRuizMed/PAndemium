@@ -1,0 +1,18 @@
+FROM node:14-slim
+LABEL version="0.3.0" maintainer="drm19933@gmail.com"
+
+RUN npm i -g grunt-cli && mkdir app && chown node:node app && \
+    npm uninstall -g yarn
+
+USER node
+
+WORKDIR /app
+
+COPY package*.json ./
+COPY Gruntfile.js ./
+COPY src/* ./src/
+
+RUN npm i grunt-shell grunt && grunt install && \
+    rm -rf /var/lib/apt/lists/*
+
+CMD grunt start
