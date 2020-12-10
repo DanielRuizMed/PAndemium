@@ -1,7 +1,7 @@
 ## Implementación del código
 ---
  
-Puesto que ya tenemos creada una clase controladora [pandemiun.js](../src/class/pandemium.js) la cual gestiona las clases [ListadoContagios.js](../src/class/ListadoContagios.js) y [ListadoUsuarios.js](../src/class/ListadoUsuarios.js).
+Puesto que ya tenemos creada una clase controladora [pandemiun.js](../src/class/pandemiun.js) la cual gestiona las clases [ListadoContagios.js](../src/class/ListadoContagios.js) y [ListadoUsuarios.js](../src/class/ListadoUsuarios.js).
  
 Se ha generado el siguiente código donde con ayuda de los middleware de Koa:
 - Koa-router: se ha definido la ruta de consulta con el verbo GET usando su método .get() e incluyendo en su path las variables que deseamos recoger.
