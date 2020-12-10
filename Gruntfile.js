@@ -15,6 +15,9 @@ module.exports = function(grunt) {
       },
       start:{
         command: 'node src/index.js'
+      },
+      build:{
+        command: 'docker build -f Dockerfile.api . --tag pandemiun'
       }
       
     }
@@ -24,4 +27,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', 'mochaTest');
   grunt.registerTask('install', ['shell:install']);
   grunt.registerTask('start', ['shell:start']);
+  grunt.registerTask('build', ['shell:build']);
 }
