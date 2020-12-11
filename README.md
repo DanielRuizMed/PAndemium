@@ -40,7 +40,7 @@ Para el sistema de logs he buscado entre diferentes herramientas como:
 - bunyan-logger
 - koa-logger-middleware
 
-Eligiendo utilizar **koa-logger-middleware**, ya que es una versión mejorada de koa-logger, donde se permite la personalización de respuestas, [como lo uso](koa_log.md).
+Eligiendo utilizar **koa-logger-middleware**, ya que es una versión mejorada de koa-logger, donde se permite la personalización de respuestas, [como lo uso](docs/koa_log.md).
 
 
 
