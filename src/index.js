@@ -3,15 +3,16 @@ const Koa = require('koa');
 const koaBody = require('koa-body');
 const Router = require('koa-router');
 const request = require('request');
-const logger = require('koa-logger');
+const logger = require('koa-logger-middleware');
 
 //Clases
 const pandemium = require('./class/pandemiun.js')
 var port = process.env.PORT || 8081;
 
 //instancias
-const app = new Koa();
+const app = new Koa({});
 const router = new Router();
+
 
 // Set up body parsing middleware
 app.use(koaBody());
@@ -29,7 +30,14 @@ router.get('/api/:provincia/:fecha', (ctx, next) => {
 		ctx.body = {
 			status: 'Error!',
 			message: ctx.body
-		};
+        };
+       
+        ctx.__logInfo = {
+            status : ctx.response.status,
+            header : ctx.response.header,
+            path: ctx.request.url,
+            body : ctx.body
+        };
     }
 
 	next();
@@ -63,6 +71,13 @@ router.put('/api', (ctx, next) => {
                 status: 'Error!',
                 message: 'Ni actualización, ni creado el nick no existe o ha sido creado, el estado y provincia puede ser errone'
             };
+
+            ctx.__logInfo = {
+                status : ctx.response.status,
+                header : ctx.response.header,
+                path: ctx.request.url,
+                body : ctx.body
+            };
         }else{
 
             ctx.body = {
@@ -87,6 +102,13 @@ router.get('/total_contagios/:ccaa', async (ctx, next) => {
         resultado = { status: 'Error!',
                       message : resultado }
         ctx.response.status = 404;
+
+        ctx.__logInfo = {
+            status : ctx.response.status,
+            header : ctx.response.header,
+            path: ctx.request.url,
+            body : ctx.body
+        };
     }
 
     ctx.body = resultado;
@@ -109,6 +131,13 @@ router.get('/confinamiento/:ccaa', async (ctx, next) => {
         resultado = { status: 'Error!',
                       message : resultado }
         ctx.response.status = 404;
+
+        ctx.__logInfo = {
+            status : ctx.response.status,
+            header : ctx.response.header,
+            path: ctx.request.url,
+            body : ctx.body
+        };
     }
 
     ctx.body = resultado;
