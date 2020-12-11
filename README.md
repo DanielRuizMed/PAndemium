@@ -35,6 +35,15 @@ Fichero [Gruntfile.js](Gruntfile.js)
  
 Se ha empezado a crear el [Dockerfile](Dockerfile.api) para su futuro despliegue, donde hemos instalado lo necesario para el funcionamiento del gestor de tareas y subido el contenido de la carpeta ./src donde está contenida nuestra aplicación, para su posterior lanzamiento. Se ha utilizado el usuario sin privilegio creado por la imagen de node y se ha eliminado yarn, cache,.. siguiendo las buenas prácticas y buscando que la imagen sea lo más liviana posible.
 
+Para el sistema de logs he buscado entre diferentes herramientas como:
+- koa-logger
+- bunyan-logger
+- koa-logger-middleware
+
+Eligiendo utilizar **koa-logger-middleware**, ya que es una versión mejorada de koa-logger, donde se permite la personalización de respuestas, [como lo uso](koa_log.md).
+
+
+
 ---
 
 ### Historial de rúbricas
