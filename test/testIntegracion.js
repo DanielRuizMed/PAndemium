@@ -104,6 +104,7 @@ describe('Test de integración ', () => {
                 expect( res.body ).to.be.property('ccaa').to.be.equal("Andalucia");
                 done();
             });
+        setTimeout(done, 2000);
     });
     
     it('6.3.2 solicitud incorrecta de HU6 /total_contagios/Adalucia', (done) => {
@@ -115,6 +116,7 @@ describe('Test de integración ', () => {
                 expect( res.body ).to.be.property('status').to.be.equal("Error!");
                 done();
             });
+        setTimeout(done, 2000);
     });
 
     it('6.4.1 solicitud correcta de HU7 /confinamiento/Andalucia', (done) => {
@@ -127,7 +129,7 @@ describe('Test de integración ', () => {
                 expect( res.body ).to.be.property('ccaa').to.be.equal("Andalucia");
                 done();
             });
-            setTimeout(done, 2000);
+        setTimeout(done, 2000);
     });
     
     it('6.4.2 solicitud incorrecta de HU7 /confinamiento/Adalucia', done => {
