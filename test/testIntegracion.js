@@ -118,7 +118,7 @@ describe('Test de integración ', () => {
     });
 
     it('6.4.1 solicitud correcta de HU7 /confinamiento/Andalucia', (done) => {
-        setTimeout(done, 5000);
+        
         chai.request(server)
             .get('/confinamiento/Andalucia')
             .end( function(err,res){
@@ -127,10 +127,11 @@ describe('Test de integración ', () => {
                 expect( res.body ).to.be.property('ccaa').to.be.equal("Andalucia");
                 done();
             });
+            setTimeout(done, 2000);
     });
     
-    it('6.4.2 solicitud incorrecta de HU7 /confinamiento/Adalucia', (done) => {
-        setTimeout(done, 5000);
+    it('6.4.2 solicitud incorrecta de HU7 /confinamiento/Adalucia', done => {
+        
         chai.request(server)
             .get('/confinamiento/Adalucia')
             .end( function(err,res){
@@ -139,5 +140,6 @@ describe('Test de integración ', () => {
                 expect( res.body ).to.be.property('status').to.be.equal("Error!");
                 done();
             });
+        setTimeout(done, 2000);
     });
 });
