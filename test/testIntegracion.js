@@ -96,6 +96,7 @@ describe('Test de integración ', () => {
     });
 
     it('6.3.1 solicitud correcta de HU6 /total_contagios/Andalucia', (done) => {
+        setTimeout(done, 2000);
         chai.request(server)
             .get('/total_contagios/Andalucia')
             .end( function(err,res){
@@ -104,7 +105,7 @@ describe('Test de integración ', () => {
                 expect( res.body ).to.be.property('ccaa').to.be.equal("Andalucia");
                 done();
             });
-        setTimeout(done, 2000);
+        
     });
     
     it('6.3.2 solicitud incorrecta de HU6 /total_contagios/Adalucia', (done) => {
