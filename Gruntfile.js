@@ -7,6 +7,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Configure a mochaTest task
     mochaTest: {
+      options: {
+        timeout: 3000
+      },
         src: ['test/**/*.js']
     },
     shell:{
