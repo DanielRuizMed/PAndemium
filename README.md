@@ -29,7 +29,7 @@ siguiendo el diseño explicado y las historias de usuario:
 - Para la resolución de [HU6, consultar el número de contagios total de una Comunidad Autónoma (CCAA)](https://github.com/DanielRuizMed/PAndemium/issues/83) se ha implementado el siguiente [código y test](docs/co_te_hu6.md)
 - Para la resolución de [HU7, consultar si una Comunidad Autónama (ccaa) esta confinada](https://github.com/DanielRuizMed/PAndemium/issues/84) se ha implementado el siguiente [código y test](docs/co_te_hu7.md)
  
-Para la configuración del gestor de tareas he utilizado grunt-shell para generar las tareas install y start ya que test ya estaba implementada. Y puesto que necesitaba que las tareas mandasen órdenes a una shell he necesitado utilizar el módulo grunt-shell mencionado.
+Para la configuración del gestor de tareas he utilizado grunt-shell para generar las tareas install y start ya que test ya estaba implementada. Y puesto que necesitaba que las tareas mandasen órdenes a una shell he necesitado utilizar el módulo grunt-shell mencionado. La tarea build se ha usado para eliminar la carpeta docs y Readme.md buscando que la imagen tenga lo necesario para funcionar, ya que node no necesita construir,generar... ejecutables.
  
 Fichero [Gruntfile.js](Gruntfile.js)
  
