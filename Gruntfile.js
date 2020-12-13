@@ -21,6 +21,9 @@ module.exports = function(grunt) {
       },
       build:{
         command: 'rm -r docs && rm README.md'
+      },
+      default:{
+        command: "ls -l"
       }
       
     }
@@ -30,5 +33,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test', 'mochaTest');
   grunt.registerTask('install', ['shell:install']);
   grunt.registerTask('start', ['shell:start']);
-  grunt.registerTask('build', '');
+  grunt.registerTask('build', ['shell:build']);
+  grunt.registerTask('default', ['shell:default']);
 }
