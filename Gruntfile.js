@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     // Configure a mochaTest task
     mochaTest: {
       options: {
-        timeout: 3000
+        timeout: 9000
       },
         src: ['test/**/*.js']
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         command: 'node src/index.js'
       },
       build:{
-        command: 'docker build -f Dockerfile.api . --tag pandemiun'
+        command: 'rm -r docs && rm README.md'
       }
       
     }
@@ -30,5 +30,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', 'mochaTest');
   grunt.registerTask('install', ['shell:install']);
   grunt.registerTask('start', ['shell:start']);
-  grunt.registerTask('build', ['shell:build']);
+  grunt.registerTask('build', '');
 }
