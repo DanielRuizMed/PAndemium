@@ -20,7 +20,8 @@ module.exports = function(grunt) {
         command: 'node src/index.js'
       },
       build:{
-        command: 'rm -r docs && rm README.md'
+        //command: 'rm -r docs && rm README.md'
+        command: 'ls -l'
       },
       default:{
         command: "ls -l"
